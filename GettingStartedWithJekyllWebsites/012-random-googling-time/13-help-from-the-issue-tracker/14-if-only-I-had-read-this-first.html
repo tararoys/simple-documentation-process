@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://24ways.org/2013/get-started-with-github-pages/ -->
+<html lang="en-gb" class="js-enhanced svg"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+    <link rel="dns-prefetch" href="http://themes.googleusercontent.com/">
+    <link rel="dns-prefetch" href="http://www.google-analytics.com/">
+    <link rel="dns-prefetch" href="http://cloud.24ways.org/">
+    <link rel="dns-prefetch" href="http://media.24ways.org/">
+    <link rel="dns-prefetch" href="http://static.24ways.org/">
+    <script type="text/javascript" async="" id="gauges-tracker" data-site-id="5299b018f5a1f50cc600011d" src="./14-if-only-I-had-read-this-first_files/track.js"></script><script async="" src="./14-if-only-I-had-read-this-first_files/analytics.js"></script><script>
+        // Cut the mustard
+        var enhanced=false, ddecn='';
+        if (document.querySelector && window.addEventListener){ddecn+=' js-enhanced'; enhanced=true;}
+        // Detect support for SVG
+        if(document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1")){ddecn+=' svg';}
+        document.documentElement.className += ddecn;
+    </script>
+<!--[if lt IE 9]>
+    <script src="/_assets/js/html5shiv.min.js"></script>
+<![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="./14-if-only-I-had-read-this-first_files/styles_v25.css">
+    <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/24ways">
+    <link rel="icon" href="http://static.24ways.org/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="http://static.24ways.org/icons/apple-touch-icon.png">
+    <link rel="author" href="http://24ways.org/humans.txt">
+    
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="application-name" content="24 ways">
+    <meta name="apple-mobile-web-app-title" content="24 ways">
+    <meta name="twitter:site" content="@24ways">
+    <meta name="twitter:title" content="Get Started With GitHub Pages (Plus Bonus Jekyll)">
+    <meta name="twitter:description" content="Anna Debenham guides us through the basics of using GitHub Pages with Jekyll to create simple, template-based collaborative websites. So hitch your huskies to your dogsled and set off at a racing start!">
+    <meta name="twitter:creator" content="@anna_debenham">
+    <meta name="twitter:image" content="http://cloud.24ways.org/authors/annadebenham160.jpg">
+    <meta name="twitter:card" content="summary">
+
+    <title>Get Started With GitHub Pages (Plus Bonus Jekyll) ◆ 24 ways</title>
+<style type="text/css">.fancybox-margin{margin-right:0px;}</style></head>
+
+<body class="year-2013" data-gclp-initialized="true" data-gistbox-initialized="true">
+    <header class="banner" role="banner" id="top">
+        <h1 class="banner_logo"><a href="http://24ways.org/" rel="home">24 ways <span>to impress your friends</span></a></h1>
+    </header><!--/@banner-->
+    <a class="menu" href="http://24ways.org/2013/get-started-with-github-pages/#menu" data-icon="☰">Jump to menu</a>
+
+
+
+
+
+
+
+    <main class="main" role="main">
+        <article class="article h-entry day-18">
+            <header class="article_header">
+                <h1 class="article_title p-name">Get Started With GitHub Pages (Plus Bonus Jekyll)</h1>
+                <p class="article_byline p-author h-card">
+                    <a class="u-url" href="http://24ways.org/2013/get-started-with-github-pages/#author">
+                        <span class="avatar"><img class="article_image u-photo" src="./14-if-only-I-had-read-this-first_files/annadebenham280.jpg" width="160" height="160" alt="Anna Debenham"></span>
+                        <span class="p-name">Anna Debenham</span>
+                    </a>
+                </p><p>
+            </p></header>
+
+            <footer class="article_footer">
+                <ul class="list">
+                    <li class="list_item"><time class="dt-published" datetime="2013-12-18T00:00:00+00:00">18 Dec<span>ember</span> 2013</time></li>
+                    <li class="list_item">Published in <a href="http://24ways.org/topics/code/">Code</a></li>
+                    <li class="list_item"><a href="http://24ways.org/2013/get-started-with-github-pages/#comments">17 comments</a></li>
+                </ul>
+            </footer>
+
+            <div class="article_main e-content">
+                              
+                <p class="lede">After several failed attempts at getting set up with <a href="http://pages.github.com/">GitHub Pages</a>, I vowed that if I ever figured out how to do it, I’d write it up. Fortunately, I did eventually figure it out, so here is my write-up.</p>
+
+<h2>Why I think GitHub Pages is cool</h2>
+
+<p>Normally when you host stuff on GitHub, you’re just storing your files there. If you push site files, what you’re storing is the code, and when you view a file, you’re viewing the code rather than the output. What GitHub Pages lets you do is store those files, and if they’re <span class="caps">HTML</span> files, you can view them like any other website, so there’s no need to host them separately yourself.</p>
+
+<p>GitHub Pages accepts static <span class="caps">HTML</span> but can’t execute languages like <span class="caps">PHP</span>, or use a database in the way you’re probably used to, so you’ll need to output static <span class="caps">HTML</span> files. This is where templating tools such as <a href="http://jekyllrb.com/">Jekyll</a> come in, which I’ll talk about later.</p>
+
+<p>The main benefit of GitHub Pages is ease of collaboration. Changes you make in the repository are automatically synced, so if your site’s hosted on GitHub, it’s as up-to-date as your GitHub repository. This really appeals to me because when I just want to quickly get something set up, I don’t want to mess around with hosting; and when people submit a pull request, I want that change to be visible as soon as I merge it without having to set up web hooks.</p>
+
+<h2>Before you get started</h2>
+
+<p>If you’ve used GitHub before, already have an account and know the basics like how to set up a repository and clone it to your computer, you’re good to go. If not, I recommend getting familiar with that first. The GitHub site has <a href="https://help.github.com/articles/set-up-git">extensive documentation on getting started</a>, and if you’re not a fan of using the command line, the official GitHub apps for <a href="http://mac.github.com/">Mac</a> and <a href="http://windows.github.com/">Windows</a> are great.</p>
+
+<p>I also found <a href="http://www.thinkful.com/learn/a-guide-to-using-github-pages/">this tutorial about GitHub Pages by Thinkful</a> really useful, and it contains details on how to turn an existing repository into a GitHub Pages site.</p>
+
+<p>Although this involves a bit of using the command line, it’s minimal, and I’ll guide you through the basics.</p>
+
+<h2>Setting up GitHub Pages</h2>
+
+<p>For this demo we’re going to build a Christmas recipe site — nothing complex, just a place to store recipes so we can share them with people, and they can fork or suggest changes to ones they like. My GitHub username is <a href="https://github.com/maban">maban</a>, and the project I’ve set up is called <a href="https://github.com/maban/christmas-recipes">christmas-recipes</a>, so once I’ve set up GitHub Pages, the site can be found here: <a href="http://maban.github.io/christmas-recipes/">http://maban.github.io/christmas-recipes/</a></p>
+
+<p>You can set up a custom domain, but by default, the <span class="caps">URL</span> for your GitHub Pages site is <em>your-username.github.io/your-project-name</em>.</p>
+
+<h3>Set up the repository</h3>
+
+<p>The first thing we’re going to do is <a href="http://github.com/new">create a new GitHub repository</a>, in exactly the same way as normal, and clone it to the computer. Let’s give it the name <i>christmas-recipes</i>. There’s nothing in it at the moment, but that’s OK.</p>
+
+<p class="image"><img src="./14-if-only-I-had-read-this-first_files/new-repo.jpg" alt="A screenshot of setting up a new repository using the Github website"></p>
+
+<p>After setting up the repository on the GitHub website, I cloned it to my computer in my <em>Sites</em> folder using the GitHub app (you can clone it somewhere else, if you want), and now I have a local repository synced with the remote one on GitHub.</p>
+
+<h3>Navigate to the repository</h3>
+
+<p>Now let’s open up the command line and navigate to the local repository. The easiest way to do this in Terminal is by typing <code>cd </code> and dragging and dropping the folder into the terminal window and pressing <strong>Return</strong>. You can refer to <a href="http://media.24ways.org/2013/coyier/drag-folder.gif">Chris Coyier’s <span class="caps">GIF</span> illustrating this very same thing</a>, from last week’s 24 ways article “<a href="http://24ways.org/2013/grunt-is-not-weird-and-hard/">Grunt for People Who Think Things Like Grunt are Weird and Hard</a>” (which is excellent).</p>
+
+<p>So, for me, that’s…</p>
+
+<pre class="language-unix" data-initialized="true" data-gclp-id="0"><code>cd /Users/Anna/Sites/christmas-recipes 
+</code></pre>
+
+<h3>Create a special GitHub Pages branch</h3>
+
+<p>So far we haven’t done anything different from setting up a regular repository, but here’s where things change.</p>
+
+<p>Now we’re in the right place, let’s create a <i>gh-pages</i> branch. This tells GitHub that this is a special branch, and to treat the contents of it differently.</p>
+
+<p>Make sure you’re still in the <i>christmas-recipes</i> directory, and type this command to create the <i>gh-pages</i> branch:</p>
+
+<pre class="language-unix" data-initialized="true" data-gclp-id="1"><code>git checkout --orphan gh-pages
+</code></pre>
+
+<p>That <code>--orphan</code> option might be new to you. An orphaned branch is an empty branch that’s disconnected from the branch it was created off, and it starts with no commits, making it a special standalone branch. <code>checkout</code> switches us from the branch we were on to that branch.</p>
+
+<p>If all’s gone well, we’ll get a message saying <samp>Switched to a new branch ‘gh-pages’</samp>.</p>
+
+<p>You may get an error message saying you don’t have admin privileges, in which case you’ll need to type <code>sudo</code> at the start of that command.</p>
+
+<h3>Make <em>gh-pages</em> your default branch (optional)</h3>
+
+<p>The <i>gh-pages</i> branch is separate to the <i>master</i> branch, but by default, the <i>master</i> branch is what will show up if we go to our repository’s <span class="caps">URL</span> on GitHub. To change this, go to the repository settings and select <i>gh-pages</i> as the default branch.</p>
+
+<p class="image"><img src="./14-if-only-I-had-read-this-first_files/default-branch.jpg" class="A screenshot of changing the default branch on the Github site"></p>
+
+<p>If, like me, you only want the one branch, you can <a href="http://oli.jp/2011/github-pages-workflow/#deleting-master">delete the <i>master</i> branch by following Oli Studholme’s tutorial</a>. It’s actually really easy to do, and means you only have to worry about keeping one branch up to date.</p>
+
+<p>If you prefer to work from <i>master</i> but push updates to the <i>gh-pages</i> branch, <a href="http://lea.verou.me/2011/10/easily-keep-gh-pages-in-sync-with-master/">Lea Verou has written up a quick tutorial on how to do this</a>, and it basically involves working from the <i>master</i> branch, and using <code>git rebase</code> to bring one branch up to date with another.</p>
+
+<p>At the moment, we’ve only got that branch on the local machine, and it’s empty, so to be able to see something at our special GitHub Pages <span class="caps">URL</span>, we’ll need to create a page and push it to the remote repository.</p>
+
+<h3>Make a page</h3>
+
+<p>Open up your favourite text editor, create a file called <i>index.html</i> in your <i>christmas-recipes</i> folder, and put some exciting text in it. Don’t worry about the markup: all we need is text because right now we’re just checking it works.</p>
+
+<p class="image"><img src="./14-if-only-I-had-read-this-first_files/index.jpg" class="A screenshot of some HTML in a text editor."></p>
+
+<p>Now, let’s commit and push our changes. You can do that in the command line if you’re comfortable with that, or you can do it via the GitHub app. Don’t forget to add a useful commit message.</p>
+
+<p class="image"><img src="./14-if-only-I-had-read-this-first_files/pages-commit.jpg" alt="Committing some changes using the Github for Mac app"></p>
+
+<p>Now we’re ready to see our gorgeous new site! Go to <i>your-username.github.io/your-project-name</i> and, hopefully, you’ll see your first GitHub Pages site. If not, don’t panic, it can take up to ten minutes to publish, so you could <a href="http://www.bbcgoodfood.com/recipes/8047/molten-mug-chocolate-cake">make a quick cake in a cup</a> while you wait.</p>
+
+<p>After a short wait, our page should be live! Hopefully that wasn’t too traumatic. Now we know it works, we can add some proper markup and <span class="caps">CSS</span> and even some more pages.</p>
+
+<p>If you’re feeling brave, how about we take it to the next level…</p>
+
+<h2>Setting up Jekyll</h2>
+
+<p>Since GitHub Pages can’t execute languages like <span class="caps">PHP</span>, we need to give it static <span class="caps">HTML</span> files. This is fine if there are only a few pages, but soon we’ll start to miss things like <span class="caps">PHP</span> includes for content that’s the same on every page, like headers and footers.</p>
+
+<p>Jekyll helps set up templates and turn them into static <span class="caps">HTML</span>. It separates markup from content, and makes it a lot easier for people to edit pages collaboratively. With our recipe site, we want to make it really easy for people to fix typos or add notes, without having to understand <span class="caps">PHP</span>. Also, there’s the added benefit that static <span class="caps">HTML</span> pages load really fast.</p>
+
+<p><strong>Jekyll isn’t officially supported on Windows, but <a href="http://jekyllrb.com/docs/windows/#installation">it is still possible to run it</a> if you’re prepared to get your hands dirty.</strong></p>
+
+<h3>Install Jekyll</h3>
+
+<p>Back in Terminal, we’re going to install Jekyll…</p>
+
+<pre class="language-unix" data-initialized="true" data-gclp-id="2"><code>gem install jekyll
+</code></pre>
+
+<p>…and wait for the script to run. This might take a few moments. It might take so long that you get worried its broken, but resist the urge to start mashing your keyboard like I did.</p>
+
+<h3>Get Jekyll to run on the repository</h3>
+
+<p>Fingers crossed nothing has gone wrong so far. If something did go wrong, don’t give up! <a href="http://andytaylor.me/2012/11/03/installing-ruby-and-jekyll/">Check this helpful post by Andy Taylor</a> – you probably just need to install something else first. </p>
+
+<p>Now we’re going to tell Jekyll to set up a new project in the repository, which is in my <em>Sites</em> folder (yours may be in a different place). Remember, we can drag the directory into the terminal window after the command.</p>
+
+<pre class="language-unix" data-initialized="true" data-gclp-id="3"><code>jekyll new /Users/Anna/Sites/christmas-recipes
+</code></pre>
+
+<p>If everything went as expected, we should get this error message: <samp>Conflict: /Users/Anna/Sites/christmas-recipes exists and is not empty.</samp></p>
+
+<p>But that’s OK. It’s just upset because we’ve got that <i>index.html</i> file and possibly also a <i><span class="caps">README</span>.md</i> in there that we made earlier. So move those onto your desktop for the moment and run the command again.</p>
+
+<pre class="language-unix" data-initialized="true" data-gclp-id="4"><code>jekyll new /Users/Anna/Sites/christmas-recipes
+</code></pre>
+
+<p>It should say that the site has installed.</p>
+
+<p>Check you’re in the repository, and if you’re not, navigate to it by typing <code>cd </code>, drag the <i>christmas-recipes</i> directory into terminal…</p>
+
+<pre class="language-unix" data-initialized="true" data-gclp-id="5"><code>jekyll cd /Users/Anna/Sites/christmas-recipes
+</code></pre>
+
+<p>…and type this command to tell Jekyll to run:</p>
+
+<pre class="language-unix" data-initialized="true" data-gclp-id="6"><code>jekyll serve --watch
+</code></pre>
+
+<p>By adding <code>--watch</code> at the end, we’re forcing Jekyll to rebuild the site every time we hit <strong>Save</strong>, so we don’t have to keep telling it to update every time we want to view the changes. We’ll need to run this every time we start work on the project, otherwise changes won’t be applied. For now, wait while it does its thing. </p>
+
+<h3>Update the config file</h3>
+
+<p>When it’s finished, we’ll see the text <samp>press ctrl-c to stop</samp>. <strong>Don’t do that, though</strong>. Instead, open up the directory. You’ll notice some new files and folders in there. There’s one called <i>_site</i>, and that’s where all the site files are saved when they’re turned into static <span class="caps">HTML</span>. <strong>Don’t touch the files in here</strong> — they’re the generated files and will get overwritten every time we make changes to pages and layouts.</p>
+
+<p>There’s a file in our directory called <i>_config.yml</i>. This has some settings we can change, one of them being what our base <span class="caps">URL</span> is. GitHub Pages will assume the base <span class="caps">URL</span> is above the project repository, so changing the settings here will help further down the line when setting up navigation links.</p>
+
+<p>Replace the contents of the <i>_config.yml</i> file with this:</p>
+
+<pre class="language-html" data-initialized="true" data-gclp-id="7"><code>name: Christmas Recipes
+markdown: redcarpet
+pygments: true
+baseurl: /christmas-recipes
+</code></pre>
+
+<h3>Set up your files</h3>
+
+<p>Overwrite the <i>index.html</i> file in the root with the one we made earlier (you might want to pop the <i><span class="caps">README</span>.md</i> back in there, too). </p>
+
+<p>Delete the files in the <i>css</i> folder — we’ll add our own later.</p>
+
+<h3>View the Jekyll site</h3>
+
+<p>Open up your favourite browser and type <i>http://localhost:4000/christmas-recipes</i> in the address bar.</p>
+
+<p class="image"><img src="./14-if-only-I-had-read-this-first_files/pages-site-initial.jpg" alt="A screenshot of how the site looks so far"></p>
+
+<p>Check it out, that’s your site! But it could do with a bit more love.</p>
+
+<h3>Set up the <i>_includes</i> files</h3>
+
+<p>It’s always useful to be able to pull in snippets of content onto pages, such as the header and footer, so they only need to be updated in one place. That’s what an <i>_includes</i> folder is for in Jekyll. Create a folder in the root called <i>_includes</i>, and within it add two files: <i>head.html</i> and <i>foot.html</i>. </p>
+
+<p>In <i>head.html</i>, paste the following:</p>
+
+<pre class="language-html" data-initialized="true" data-gclp-id="8"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;{{ page.title }}&lt;/title&gt;
+        &lt;link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" &gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+</code></pre>
+
+<p>and in <i>foot.html</i>:</p>
+
+<pre class="language-html" data-initialized="true" data-gclp-id="9"><code>&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Whenever we want to pull in something from the <i>_includes</i> folder, we can use <code>{% include filename.html %}</code> in the layout file — I’ll show you how to set that up in next step.</p>
+
+<h3>Making layouts</h3>
+
+<p>In our directory, there’s a folder called <i>_layouts</i> and this lets us create a reusable template for pages. Inside that is a <i>default.html</i> file. </p>
+
+<p>Delete everything in <i>default.html</i> and paste in this instead:</p>
+
+<pre class="language-html" data-initialized="true" data-gclp-id="10"><code>{% include head.html %}
+</code>
+<code>    &lt;h1&gt;{{ page.title }}&lt;/h1&gt;
+</code>
+<code>    {{ content }}
+</code>
+<code>{% include foot.html %}
+</code></pre>
+
+<p>That’s a very basic page with a header, footer, page title and some content. To apply this template to a page, go back into the <i>index.html</i> page and add this snippet to the very top of the file:</p>
+
+<pre class="language-html" data-initialized="true" data-gclp-id="11"><code>---
+layout: default
+title: Home
+---
+</code></pre>
+
+<p>Now save the <i>index.html</i> file and hit <strong>Refresh</strong> in the browser. We should see a heading where <code>{{ page.title }}</code> was in the layout, which matches what comes after <code>title:</code> on the page itself (in this case, <em>Home</em>). So, if we wanted a subheading to appear on every page, we could add <code>{{ page.subheading }}</code> to where we want it to appear in our layout file, and a line that says <code>subheading: This is a subheading</code> in between the dashes at the top of the page itself.</p>
+
+<h3>Using Markdown for templates</h3>
+
+<p>Anything on a page that sits under the closing dashes is output where <code>{{ content }}</code> appears in the template file. At the moment, this is being output as <span class="caps">HTML</span>, but we can use Markdown instead, and Jekyll will convert that into <span class="caps">HTML</span>. For this recipe site, we want to make it as easy as possible for people to be able to collaborate, and also have the markup separate from the content, so let’s use Markdown instead of <span class="caps">HTML</span> for the recipes.</p>
+
+<p>Telling a page to use Markdown instead of <span class="caps">HTML</span> is incredibly simple. All we need to do is change the filename from <i>.html</i> to <i>.md</i>, so let’s rename the <i>index.html</i> to <i>index.md</i>. Now we can use Markdown, and Jekyll will output that as <span class="caps">HTML</span>.</p>
+
+<h3>Create a new layout</h3>
+
+<p>We’re going to create a new layout called <i>recipe</i> which is going to be the template for any recipe page we create. Let’s keep it super simple.</p>
+
+<p>In the <i>_layouts</i> folder, create a file called <i>recipe.html</i> and paste in this:</p>
+
+<pre class="language-html" data-initialized="true" data-gclp-id="12"><code>{% include head.html %}
+</code>
+<code>	&lt;main&gt;
+</code>
+<code>    	&lt;h1&gt;{{ page.title }}&lt;/h1&gt;
+</code>
+<code>    	{{ content }}
+</code>
+<code>    	&lt;p&gt;Recipe by &lt;a href="{{ page.recipe-attribution-link }}"&gt;{{ page.recipe-attribution }}&lt;/a&gt;.&lt;/p&gt;
+</code>
+<code>	&lt;/main&gt;
+</code>
+<code>	{% include nav.html %}
+</code>
+<code>{% include foot.html %}
+</code></pre>
+
+<p>That’s our template. The content that goes on the recipe layout includes a page title, the recipe content, a recipe attribution and a recipe attribution link.</p>
+
+<h3>Adding some recipe pages</h3>
+
+<p>Create a new file in the root of the <i>christmas-recipes</i> folder and call it <i>gingerbread.md</i>. Paste the following into it:</p>
+
+<pre class="language-html" data-initialized="true" data-gclp-id="13"><code>---
+layout: recipe
+title: Gingerbread
+recipe-attribution: HungryJenny
+recipe-attribution-link: http://www.opensourcefood.com/people/HungryJenny/recipes/soft-christmas-gingerbread-cookies
+---
+Makes about 15 small cookies.
+</code>
+<code>## Ingredients
+</code>
+<code>* 175g plain flour
+* 90g brown sugar
+* 50g unsalted butter, diced, at room temperature
+* 2 tbsp golden syrup
+* 1 egg, beaten
+* 1 tsp ground ginger
+* 1 tsp cinnamon
+* 1 tsp bicarbonate of soda
+* Icing sugar to dust
+</code>
+<code>## Method
+</code>
+<code>1. Sift the flour, ginger, cinnamon and bicarbonate of soda into a large mixing bowl.
+2. Use your fingers to rub in the diced butter. Mix in the sugar.
+3. Mix the egg with the syrup then pour into the flour mixture. Fold in well to form a dough.
+4. Tip some flour onto the work surface and knead the dough until smooth.
+5. Preheat the oven to 180°C.
+6. Roll the dough out flat and use a shaped cutter to make as many cookies as you like.
+7. Transfer the cookies to a tray and bake in the oven for 15 minutes. Lightly dust the cookies with icing sugar.
+</code></pre>
+
+<p>The content is in Markdown, and when we hit <strong>Save</strong>, it’ll be converted into <span class="caps">HTML</span> in the <i>_site</i> folder. Save the file, and go to <i>http://localhost:4000/christmas-recipes/gingerbread.html</i> in your favourite browser.</p>
+
+ <figure>
+<img src="./14-if-only-I-had-read-this-first_files/page-recipe.jpg" alt="A screenshot of the recipes page">
+<figcaption>As you can see, the Markdown content has been converted into <span class="caps">HTML</span>, and the attribution text and link has been inserted in the right place.</figcaption>
+</figure>
+
+<h3>Add some navigation</h3>
+
+<p>In your <i>_includes</i> folder, create a new file called <i>nav.html</i>. Here is some code that will generate your navigation:</p>
+
+<pre class="language-html" data-initialized="true" data-gclp-id="14"><code>&lt;nav class="nav-primary" role="navigation" &gt;
+    &lt;ul&gt;
+        {% for p in site.pages %}
+        &lt;li&gt;
+        	&lt;a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.baseurl }}{{ p.url }}"&gt;{{ p.title }}&lt;/a&gt;
+        &lt;/li&gt;
+        {% endfor %}
+    &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<p>This is going to look for all pages and generate a list of them, and give the navigation item that is currently active a class of <code>active</code> so we can style it differently.</p>
+
+<p>Now we need to include that navigation snippet in our layout. Paste <code>{% include nav.html %}</code> in <i>default.html</i> file, under <code>{{ content }}</code>.</p>
+
+<h3>Push the changes to GitHub Pages</h3>
+
+<p>Now we’ve got a couple of pages, it’s time to push our changes to GitHub. We can do this in exactly the same way as before. Check your special GitHub <span class="caps">URL</span> (<i>your-username.github.io/your-project-name</i>) and you should see your site up and running.</p>
+
+<p><strong>If you quit Terminal, don’t forget to run <code>jekyll serve --watch</code> from within the directory the next time you want to work on the files.</strong></p>
+
+<h3>Next steps</h3>
+
+<p>Now we know the basics of creating Jekyll templates and publishing them as GitHub Pages, we can have some fun adding more pages and styling them up.</p>
+
+ <figure>
+ <img src="./14-if-only-I-had-read-this-first_files/christmas-recipes.jpg">
+ <figcaption>Here’s one I made earlier</figcaption>
+</figure>
+
+<p>I’ve only been using Jekyll for a matter of weeks, mainly for prototyping. It’s really good as a content management system for blogs, and a lot of people host their Jekyll blogs on GitHub, such as <a href="http://csswizardry.com/2012/12/a-new-css-wizardry/">Harry Roberts</a></p>
+
+<blockquote>
+		<p>By hosting the code so openly it will make me take more pride in it <em>and</em> allow me to work on it much more easily; no excuses now!</p>
+</blockquote>
+
+<p>Overall, the documentation for Jekyll feels a little sparse and geared more towards blogs than other sites, but as more people discover the benefits of it, I’m sure this will improve over time.</p>
+
+<p>If you’re interested in poking about with some code, <a href="https://github.com/maban/christmas-recipes">all the files from this tutorial are available on GitHub</a>.</p>
+            </div>
+
+            <section class="section" id="author">
+                <header class="section_header">
+                    <h1 class="section_title">About the author</h1>
+                </header>
+                <div class="section_main">
+                    <p><strong class="fn n">Anna Debenham</strong> is a freelance <span class="role">front-end developer</span> living in Brighton in the UK.</p>
+
+<p>She’s the author of <a href="http://www.fivesimplesteps.com/products/front-end-style-guides">Front-end Style Guides</a>, and when she’s not playing on them, she’s testing as many <a href="http://console.maban.co.uk/">game console browsers</a> as she can get her hands on.</p>
+                    <p><a class="continue" href="http://24ways.org/authors/annadebenham/" title="More information about Anna Debenham">More articles by Anna</a></p>
+                </div>
+            </section><!--/.section-->
+
+
+
+            
+
+                      
+            <section class="section section-sponsor" id="sponsor">
+                <header class="section_header">
+                    <h1 class="section_title">Brought to you by</h1>
+                </header>
+                <div class="section_main">
+                    
+                        <a class="promo" href="http://grabaperch.com/?ref=24w01">
+    <img class="promo_image" src="./14-if-only-I-had-read-this-first_files/logo-perch.png" alt="Perch - A really little CMS" width="152" height="64">
+    <p class="promo_message">The easiest way to publish <strong>fast, flexible HTML5 websites</strong> your clients will love.</p>
+    <p class="promo_url">grabaperch.com</p>
+</a><!--/.promo-->
+
+                    
+                    
+                    
+                </div>
+            </section><!--/.section-->
+            
+
+            <section class="section" id="comments">
+                <header class="section_header">
+                    <h1 class="section_title">Comments</h1>
+                </header>
+                <div class="section_main">
+                    <p><a class="continue continue-ajax" href="http://24ways.org/2013/get-started-with-github-pages/comments/" data-replace="" data-interaction="" data-target="#comments">View 17 reader comments</a></p>
+                </div>
+            </section><!--/.section-->
+
+            		
+		<section class="section" id="related">
+		    <header class="section_header">
+		        <h1 class="section_title">Related articles</h1>
+		    </header>
+		    <div class="section_main">
+		        <ul class="list list-articles">
+		
+		            <li class="list_item">
+		            	
+			<article class="summary summary-article h-entry day-09" style="height: 299px;">
+				<header class="summary_header">
+					<h1 class="summary_title p-name">
+						<a class="u-url" rel="bookmark" href="http://24ways.org/2013/keeping-parts-of-your-codebase-private-on-github/">Keeping Parts of Your Codebase Private on GitHub</a>
+					</h1>
+					<p class="summary_meta">
+						
+						<time class="dt-published" datetime="2013-12-09T00:00:00+00:00">9 Dec 2013</time>
+						
+						
+						<a class="summary_comments" href="http://24ways.org/2013/keeping-parts-of-your-codebase-private-on-github/#comments">7 comments</a>
+						
+					</p>
+				</header>
+				<div class="summary_main">
+					<p><a href="http://csswizardry.com/">Harry Roberts</a> prepares for Christmas by squirrelling away experiments and drafts in private Git repositories, and here he neatly explains how he puts it in his pantry with his cupcakes. Once you’ve stuffed a stocking, most of all you’ve got to hide it from the kids.</p>
+					<a class="summary_link" href="http://24ways.org/2013/keeping-parts-of-your-codebase-private-on-github/">
+						Impress your friends with ‘Keeping Parts of Your Codebase Private on GitHub’
+					</a>
+				</div>
+				<footer class="summary_footer">
+					<p class="summary_author p-author h-card">
+						<a class="u-url" href="http://24ways.org/authors/harryroberts/"><img class="u-photo" src="./14-if-only-I-had-read-this-first_files/harryroberts160.jpg" alt=""><span class="p-name">Harry Roberts</span></a>
+					</p>
+				</footer>
+			</article><!--/.summary-article-->
+		            </li>
+		
+		        </ul><!--/.list-articles-->
+		    </div>
+		</section><!--/.section-->
+		
+
+            
+        </article><!--/.article-->
+    </main><!--/@main-->    <nav class="navigation" role="navigation" id="menu">
+        <h1 class="hidden">Browse 24 ways</h1>
+<div class="nav nav-traverse"><a class="nav_item nav_prev" rel="prev" href="http://24ways.org/2013/project-hubs/" data-sequence-title="Project Hubs: A Home Base for Design Projects" data-icon="←">Previous article</a><a class="nav_item nav_next" rel="next" href="http://24ways.org/2013/how-to-write-a-book/" data-sequence-title="How to Write a Book" data-icon="→">Next article</a></div><!--/.nav-traverse-->        
+<ul class="nav nav-topics">
+
+    <li class="nav_item"><a href="http://24ways.org/topics/business/" data-icon="♕">Business</a></li>
+
+    <li class="nav_item"><a href="http://24ways.org/topics/code/" data-icon="♖">Code</a></li>
+
+    <li class="nav_item"><a href="http://24ways.org/topics/content/" data-icon="♔">Content</a></li>
+
+    <li class="nav_item"><a href="http://24ways.org/topics/design/" data-icon="♗">Design</a></li>
+
+    <li class="nav_item"><a href="http://24ways.org/topics/process/" data-icon="♙">Process</a></li>
+
+    <li class="nav_item"><a href="http://24ways.org/topics/ux/" data-icon="♘">UX</a></li>
+
+</ul><!--/.nav-topics-->
+
+        <form class="search" role="search" id="search" action="http://24ways.org/search/">
+            <fieldset class="field-search">
+                <legend class="hidden">Search 24 ways</legend>
+                <label class="field_label label" for="q">Keywords</label>
+                <input class="field_input input" type="search" id="q" name="q" placeholder="e.g. CSS, Design, Research…">
+                <input class="field_button button" type="submit" value="Search">
+
+            </fieldset>
+        </form><!--/.search-->
+
+        <ul class="nav nav-site">
+            <li class="nav_item"><a href="http://24ways.org/archives/">Archives</a></li>
+            <li class="nav_item"><a href="http://24ways.org/topics/">Topics</a></li>
+            <li class="nav_item"><a href="http://24ways.org/authors/">Authors</a></li>
+            <li class="nav_item"><a href="http://24ways.org/about/">About</a></li>
+        </ul><!--/.nav-site-->
+
+    <a class="nav nav-top" href="http://24ways.org/2013/get-started-with-github-pages/#top" data-icon="⌃" style="opacity: 0; -webkit-transition: opacity 0.5s ease-out; transition: opacity 0.5s ease-out;">Return to the top of this page</a></nav><!--/@navigation-->
+    <footer class="contentinfo" role="contentinfo">
+        <p class="contentinfo_copyright">
+            <small>© 2005-2014 24 ways and our authors. <a href="http://24ways.org/about/#colophon">Colophon</a></small>
+        </p>
+        <p class="contentinfo_social">
+            <a href="http://feeds.feedburner.com/24ways" rel="alternate">Grab our RSS feed</a>
+            <a href="https://twitter.com/24ways" rel="me">Follow us on Twitter</a>
+        </p>
+    </footer><!--/@contentinfo-->
+    <script src="./14-if-only-I-had-read-this-first_files/scripts_v25.js"></script>
+
+<form id="gclp-frame-form" target="gclp-frame" method="post" style="display: none;"></form><div class="gclp-code-grabber" data-gclp-id="0" data-hasqtip="true" style="left: 915.25px; top: 3155.375px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="1" data-hasqtip="true" style="left: 915.25px; top: 3543.875px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="2" data-hasqtip="true" style="left: 915.25px; top: 6765.328125px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="3" data-hasqtip="true" style="left: 915.25px; top: 7246.328125px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="4" data-hasqtip="true" style="left: 915.25px; top: 7540.328125px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="5" data-hasqtip="true" style="left: 915.25px; top: 7742.328125px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="6" data-hasqtip="true" style="left: 915.25px; top: 7867.328125px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="7" data-hasqtip="true" style="left: 915.25px; top: 8607.328125px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="8" data-hasqtip="true" style="left: 915.25px; top: 9592.546875px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="9" data-hasqtip="true" style="left: 915.25px; top: 9892.546875px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="10" data-hasqtip="true" style="left: 915.25px; top: 10280.546875px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="11" data-hasqtip="true" style="left: 915.25px; top: 10615.546875px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="12" data-hasqtip="true" style="left: 915.25px; top: 11599.546875px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="13" data-hasqtip="true" style="left: 915.25px; top: 12265.546875px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="14" data-hasqtip="true" style="left: 915.25px; top: 13878.234375px; display: none;"></div><script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }}catch(e){}</script></body></html>

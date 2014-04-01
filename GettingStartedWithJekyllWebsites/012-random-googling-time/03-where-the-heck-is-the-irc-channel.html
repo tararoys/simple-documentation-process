@@ -1,0 +1,2225 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://github.com/jekyll/jekyll/issues/1074 -->
+<html class=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    <title>New permalink behaviour is incompatible with existing sites on GH Pages · Issue #1074 · jekyll/jekyll</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://github.com/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://github.com/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site"><meta content="summary" name="twitter:card"><meta content="jekyll/jekyll" name="twitter:title"><meta content="no idea what is happening with the new page-based docs, but GH Pages isn&amp;#39;t rendering the docs at all, it appears. I get 404&amp;#39;s for everything.
+
+update: new permalink behaviour will break pages " name="twitter:description"><meta content="https://avatars2.githubusercontent.com/u/3083652?s=400" name="twitter:image:src">
+<meta content="GitHub" property="og:site_name"><meta content="object" property="og:type"><meta content="https://avatars2.githubusercontent.com/u/3083652?s=400" property="og:image"><meta content="jekyll/jekyll" property="og:title"><meta content="https://github.com/jekyll/jekyll" property="og:url"><meta content="no idea what is happening with the new page-based docs, but GH Pages isn&#39;t rendering the docs at all, it appears. I get 404&#39;s for everything.
+
+update: new permalink behaviour will break pages for existing sites built with &lt; 1.0
+
+//cc @benbalter" property="og:description">
+
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="https://github.com/_sockets">
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_issues" data-pjax-transient="">
+    <meta content="collector.githubapp.com" name="octolytics-host"><meta content="collector-cdn.github.com" name="octolytics-script-host"><meta content="github" name="octolytics-app-id"><meta content="4A7A09C4:302D:AFC62D:5338BDC5" name="octolytics-dimension-request_id"><meta content="1163925" name="octolytics-actor-id"><meta content="tararoys" name="octolytics-actor-login"><meta content="13262cf43fb2fe3dc53859bf1980f26143b5aa7957d804ee6fc0c31af81af1e9" name="octolytics-actor-hash">
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://github.global.ssl.fastly.net/favicon.ico">
+
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="ZxJuYds68ntdpatAKKUnCrToMqEC96YsOMMGPzt28ck=" name="csrf-token">
+
+    <link href="./03-where-the-heck-is-the-irc-channel_files/github-b4baae9c06716bcd0a8068e3030607851f19b980.css" media="all" rel="stylesheet" type="text/css">
+    <link href="./03-where-the-heck-is-the-irc-channel_files/github2-4940da06adce480cfcfba223624a2b2f09e8f90f.css" media="all" rel="stylesheet" type="text/css">
+    
+
+
+        <script crossorigin="anonymous" src="./03-where-the-heck-is-the-irc-channel_files/frameworks-4ffe0645461d6fd51485ee3e555a732ee7075743.js" type="text/javascript"></script>
+        <script async="async" crossorigin="anonymous" src="./03-where-the-heck-is-the-irc-channel_files/github-8569770199d7c3e78f612511392c027e9a5ccc0d.js" type="text/javascript"></script>
+        
+        
+      <meta http-equiv="x-pjax-version" content="2a64374654fdf2c003e19d968f33dde4">
+
+      
+  <meta name="description" content="no idea what is happening with the new page-based docs, but GH Pages isn&#39;t rendering the docs at all, it appears. I get 404&#39;s for everything.
+
+update: new permalink behaviour will break pages for existing sites built with &lt; 1.0
+
+//cc @benbalter">
+
+  <meta content="3083652" name="octolytics-dimension-user_id"><meta content="jekyll" name="octolytics-dimension-user_login"><meta content="65252" name="octolytics-dimension-repository_id"><meta content="jekyll/jekyll" name="octolytics-dimension-repository_nwo"><meta content="true" name="octolytics-dimension-repository_public"><meta content="false" name="octolytics-dimension-repository_is_fork"><meta content="65252" name="octolytics-dimension-repository_network_root_id"><meta content="jekyll/jekyll" name="octolytics-dimension-repository_network_root_nwo">
+  <link href="https://github.com/jekyll/jekyll/commits/master.atom" rel="alternate" title="Recent Commits to jekyll:master" type="application/atom+xml">
+
+  <script type="text/javascript" async="" src="./03-where-the-heck-is-the-irc-channel_files/ga.js"></script><script type="text/javascript" async="" src="./03-where-the-heck-is-the-irc-channel_files/api.js"></script><style id="stylish-6" class="stylish" type="text/css">em {
+  color:red;
+}
+
+strong{
+  color: green
+}</style><style type="text/css">.fancybox-margin{margin-right:0px;}</style></head>
+
+
+  <body class="logged_in  env-production macintosh vis-public" data-gclp-initialized="true" data-gistbox-initialized="true">
+    <a href="https://github.com/jekyll/jekyll/issues/1074#start-of-content" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      <div class="header header-logged-in true">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+    
+    <a href="https://github.com/notifications" aria-label="You have unread notifications" class="notification-indicator tooltipped tooltipped-s" data-gotokey="n">
+        <span class="mail-status unread"></span>
+</a>
+
+      <div class="command-bar js-command-bar  in-repository">
+          <form accept-charset="UTF-8" action="https://github.com/search" class="command-bar-form" id="top_search_form" method="get">
+
+<div class="commandbar">
+  <span class="message"></span>
+  <input type="text" data-hotkey="/ s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off" data-username="tararoys" data-repo="jekyll/jekyll" data-branch="master" data-sha="7e90e9bfbe524e1e7162e672bea41f68714b0b18">
+  <div class="display hidden"></div>
+</div>
+
+    <input type="hidden" name="nwo" value="jekyll/jekyll">
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target" role="button" aria-haspopup="true">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked">
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global">
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="help tooltipped tooltipped-s" aria-label="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+    <input type="hidden" name="type" value="Issues">
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+        <ul class="top-nav">
+          <li class="explore"><a href="https://github.com/explore">Explore</a></li>
+            <li><a href="https://gist.github.com/">Gist</a></li>
+            <li><a href="https://github.com/blog">Blog</a></li>
+          <li><a href="https://help.github.com/">Help</a></li>
+        </ul>
+      </div>
+
+    
+
+
+  <ul id="user-links">
+    <li>
+      <a href="https://github.com/tararoys" class="name">
+        <img alt="tararoys" class=" js-avatar" data-user="1163925" height="20" src="./03-where-the-heck-is-the-irc-channel_files/1163925" width="20"> tararoys
+      </a>
+    </li>
+
+    <li class="new-menu dropdown-toggle js-menu-container">
+      <a href="https://github.com/jekyll/jekyll/issues/1074#" class="js-menu-target tooltipped tooltipped-s" aria-label="Create new...">
+        <span class="octicon octicon-plus"></span>
+        <span class="dropdown-arrow"></span>
+      </a>
+
+      <div class="new-menu-content js-menu-content">
+      </div>
+    </li>
+
+    <li>
+      <a href="https://github.com/settings/profile" id="account_settings" class="tooltipped tooltipped-s" aria-label="Account settings ">
+        <span class="octicon octicon-tools"></span>
+      </a>
+    </li>
+    <li>
+      <a class="tooltipped tooltipped-s" href="https://github.com/logout" data-method="post" id="logout" aria-label="Sign out">
+        <span class="octicon octicon-log-out"></span>
+      </a>
+    </li>
+
+  </ul>
+
+<div class="js-new-dropdown-contents hidden">
+  
+
+<ul class="dropdown-menu">
+  <li>
+    <a href="https://github.com/new"><span class="octicon octicon-repo-create"></span> New repository</a>
+  </li>
+  <li>
+    <a href="https://github.com/organizations/new"><span class="octicon octicon-organization"></span> New organization</a>
+  </li>
+
+
+    <li class="section-title">
+      <span title="jekyll/jekyll">This repository</span>
+    </li>
+      <li>
+        <a href="https://github.com/jekyll/jekyll/issues/new"><span class="octicon octicon-issue-opened"></span> New issue</a>
+      </li>
+</ul>
+
+</div>
+
+
+    
+  </div>
+</div>
+
+      
+
+        
+
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope="" itemtype="http://schema.org/WebPage">
+    
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+    <li class="subscription">
+      <form accept-charset="UTF-8" action="https://github.com/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="ZxJuYds68ntdpatAKKUnCrToMqEC96YsOMMGPzt28ck="></div>  <input id="repository_id" name="repository_id" type="hidden" value="65252">
+
+    <div class="select-menu js-menu-container js-select-menu">
+      <a class="social-count js-social-count" href="https://github.com/jekyll/jekyll/watchers">
+        863
+      </a>
+      <span class="minibutton select-menu-button with-count js-menu-target" role="button" tabindex="0" aria-haspopup="true">
+        <span class="js-select-button">
+          <span class="octicon octicon-eye-watch"></span>
+          Watch
+        </span>
+      </span>
+
+      <div class="select-menu-modal-holder">
+        <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Notification status</span>
+            <span class="octicon octicon-remove-close js-menu-close"></span>
+          </div> <!-- /.select-menu-header -->
+
+          <div class="select-menu-list js-navigation-container" role="menu">
+
+            <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input checked="checked" id="do_included" name="do" type="radio" value="included">
+                <h4>Not watching</h4>
+                <span class="description">You only receive notifications for conversations in which you participate or are @mentioned.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye-watch"></span>
+                  Watch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_subscribed" name="do" type="radio" value="subscribed">
+                <h4>Watching</h4>
+                <span class="description">You receive notifications for all conversations in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye-unwatch"></span>
+                  Unwatch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_ignore" name="do" type="radio" value="ignore">
+                <h4>Ignoring</h4>
+                <span class="description">You do not receive any notifications for conversations in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-mute"></span>
+                  Stop ignoring
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+          </div> <!-- /.select-menu-list -->
+
+        </div> <!-- /.select-menu-modal -->
+      </div> <!-- /.select-menu-modal-holder -->
+    </div> <!-- /.select-menu -->
+
+</form>
+    </li>
+
+  <li>
+  
+
+  <div class="js-toggler-container js-social-container starring-container ">
+    <a href="https://github.com/jekyll/jekyll/unstar" class="minibutton with-count js-toggler-target star-button starred" aria-label="Unstar this repository" title="Unstar jekyll/jekyll" data-remote="true" data-method="post" rel="nofollow">
+      <span class="octicon octicon-star-delete"></span><span class="text">Unstar</span>
+    </a>
+
+    <a href="https://github.com/jekyll/jekyll/star" class="minibutton with-count js-toggler-target star-button unstarred" aria-label="Star this repository" title="Star jekyll/jekyll" data-remote="true" data-method="post" rel="nofollow">
+      <span class="octicon octicon-star"></span><span class="text">Star</span>
+    </a>
+
+      <a class="social-count js-social-count" href="https://github.com/jekyll/jekyll/stargazers">
+        14,583
+      </a>
+  </div>
+
+  </li>
+
+
+        <li>
+          <a href="https://github.com/jekyll/jekyll/fork" class="minibutton with-count js-toggler-target fork-button lighter tooltipped-n" title="Fork your own copy of jekyll/jekyll to your account" aria-label="Fork your own copy of jekyll/jekyll to your account" rel="facebox nofollow">
+            <span class="octicon octicon-git-branch-create"></span><span class="text">Fork</span>
+          </a>
+          <a href="https://github.com/jekyll/jekyll/network" class="social-count">2,856</a>
+        </li>
+
+
+</ul>
+
+        <h1 itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author">
+            <a href="https://github.com/jekyll" class="url fn" itemprop="url" rel="author"><span itemprop="title">jekyll</span></a>
+          </span>
+          <span class="repohead-name-divider">/</span>
+          <strong><a href="https://github.com/jekyll/jekyll" class="js-current-repository js-repo-home-link">jekyll</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="./03-where-the-heck-is-the-irc-channel_files/octocat-spinner-32.gif" width="16">
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline js-new-discussion-timeline">
+        <div class="repository-sidebar clearfix">
+            
+
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped tooltipped-w" aria-label="Code">
+        <a href="https://github.com/jekyll/jekyll" aria-label="Code" class="js-selected-navigation-item sunken-menu-item" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /jekyll/jekyll">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="./03-where-the-heck-is-the-irc-channel_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+
+        <li class="tooltipped tooltipped-w" aria-label="Issues">
+          <a href="https://github.com/jekyll/jekyll/issues" aria-label="Issues" class="selected js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="i" data-selected-links="repo_issues /jekyll/jekyll/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class="counter">125</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="./03-where-the-heck-is-the-irc-channel_files/octocat-spinner-32.gif" width="16">
+</a>        </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
+        <a href="https://github.com/jekyll/jekyll/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /jekyll/jekyll/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class="counter">29</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="./03-where-the-heck-is-the-irc-channel_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+
+
+        <li class="tooltipped tooltipped-w" aria-label="Wiki">
+          <a href="https://github.com/jekyll/jekyll/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_wiki /jekyll/jekyll/wiki">
+            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="./03-where-the-heck-is-the-irc-channel_files/octocat-spinner-32.gif" width="16">
+</a>        </li>
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped tooltipped-w" aria-label="Pulse">
+        <a href="https://github.com/jekyll/jekyll/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /jekyll/jekyll/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="./03-where-the-heck-is-the-irc-channel_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Graphs">
+        <a href="https://github.com/jekyll/jekyll/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /jekyll/jekyll/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="./03-where-the-heck-is-the-irc-channel_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Network">
+        <a href="https://github.com/jekyll/jekyll/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /jekyll/jekyll/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="./03-where-the-heck-is-the-irc-channel_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+              <div class="only-with-full-nav">
+                
+
+  
+
+<div class="clone-url open" data-protocol-type="http" data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field" value="https://github.com/jekyll/jekyll.git" readonly="readonly">
+
+    <span aria-label="copy to clipboard" class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/jekyll/jekyll.git" data-copied-hint="copied!"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url " data-protocol-type="ssh" data-url="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone">
+  <h3><strong>SSH</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field" value="git@github.com:jekyll/jekyll.git" readonly="readonly">
+
+    <span aria-label="copy to clipboard" class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="git@github.com:jekyll/jekyll.git" data-copied-hint="copied!"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url " data-protocol-type="subversion" data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field" value="https://github.com/jekyll/jekyll" readonly="readonly">
+
+    <span aria-label="copy to clipboard" class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/jekyll/jekyll" data-copied-hint="copied!"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="https://github.com/jekyll/jekyll/issues/1074#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      <a href="https://github.com/jekyll/jekyll/issues/1074#" class="js-clone-selector" data-protocol="ssh">SSH</a>,
+      or <a href="https://github.com/jekyll/jekyll/issues/1074#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <span class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
+    <span class="octicon octicon-question"></span>
+    </a>
+  </span>
+</p>
+
+  <a href="http://mac.github.com/" data-url="github-mac://openRepo/https://github.com/jekyll/jekyll" class="minibutton sidebar-button js-conduit-rewrite-url" title="Save jekyll/jekyll to your computer and use it in GitHub Desktop." aria-label="Save jekyll/jekyll to your computer and use it in GitHub Desktop.">
+    <span class="octicon octicon-device-desktop"></span>
+    Clone in Desktop
+  </a>
+
+
+                <a href="https://github.com/jekyll/jekyll/archive/master.zip" class="minibutton sidebar-button" aria-label="Download jekyll/jekyll as a zip file" title="Download jekyll/jekyll as a zip file" rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container="">
+          
+<style type="text/css" media="screen">
+  span.labelstyle-d41313, .linked-labelstyle-d41313 {  background-color: #d41313 !important;  color: #fff !important;}.labelstyle-d41313.selected {  background-color: #d41313 !important;  color: #fff !important;}.label-select-menu .labelstyle-d41313.selected {  background:rgba(212, 19, 19, 0.12) !important;  color: #990d0d !important;}
+
+span.labelstyle-fbca04, .linked-labelstyle-fbca04 {  background-color: #fbca04 !important;  color: #332900 !important;}.labelstyle-fbca04.selected {  background-color: #fbca04 !important;  color: #332900 !important;}.label-select-menu .labelstyle-fbca04.selected {  background:rgba(251, 202, 4, 0.12) !important;  color: #997b02 !important;}
+
+span.labelstyle-bfdadc, .linked-labelstyle-bfdadc {  background-color: #bfdadc !important;  color: #2c3233 !important;}.labelstyle-bfdadc.selected {  background-color: #bfdadc !important;  color: #2c3233 !important;}.label-select-menu .labelstyle-bfdadc.selected {  background:rgba(191, 218, 220, 0.12) !important;  color: #849799 !important;}
+
+span.labelstyle-5D76CB, .linked-labelstyle-5D76CB {  background-color: #5D76CB !important;  color: #fff !important;}.labelstyle-5D76CB.selected {  background-color: #5D76CB !important;  color: #fff !important;}.label-select-menu .labelstyle-5D76CB.selected {  background:rgba(93, 118, 203, 0.12) !important;  color: #465899 !important;}
+
+span.labelstyle-1d870c, .linked-labelstyle-1d870c {  background-color: #1d870c !important;  color: #fff !important;}.labelstyle-1d870c.selected {  background-color: #1d870c !important;  color: #fff !important;}.label-select-menu .labelstyle-1d870c.selected {  background:rgba(29, 135, 12, 0.12) !important;  color: #20990d !important;}
+
+span.labelstyle-FF7D40, .linked-labelstyle-FF7D40 {  background-color: #FF7D40 !important;  color: #33180c !important;}.labelstyle-FF7D40.selected {  background-color: #FF7D40 !important;  color: #33180c !important;}.label-select-menu .labelstyle-FF7D40.selected {  background:rgba(255, 125, 64, 0.12) !important;  color: #994a26 !important;}
+
+span.labelstyle-e10c02, .linked-labelstyle-e10c02 {  background-color: #e10c02 !important;  color: #fff !important;}.labelstyle-e10c02.selected {  background-color: #e10c02 !important;  color: #fff !important;}.label-select-menu .labelstyle-e10c02.selected {  background:rgba(225, 12, 2, 0.12) !important;  color: #990801 !important;}
+
+span.labelstyle-9713f5, .linked-labelstyle-9713f5 {  background-color: #9713f5 !important;  color: #fff !important;}.labelstyle-9713f5.selected {  background-color: #9713f5 !important;  color: #fff !important;}.label-select-menu .labelstyle-9713f5.selected {  background:rgba(151, 19, 245, 0.12) !important;  color: #5e0b99 !important;}
+
+span.labelstyle-fef2c0, .linked-labelstyle-fef2c0 {  background-color: #fef2c0 !important;  color: #333026 !important;}.labelstyle-fef2c0.selected {  background-color: #fef2c0 !important;  color: #333026 !important;}.label-select-menu .labelstyle-fef2c0.selected {  background:rgba(254, 242, 192, 0.12) !important;  color: #989173 !important;}
+
+span.labelstyle-2b1fcf, .linked-labelstyle-2b1fcf {  background-color: #2b1fcf !important;  color: #fff !important;}.labelstyle-2b1fcf.selected {  background-color: #2b1fcf !important;  color: #fff !important;}.label-select-menu .labelstyle-2b1fcf.selected {  background:rgba(43, 31, 207, 0.12) !important;  color: #1f1699 !important;}
+
+span.labelstyle-000000, .linked-labelstyle-000000 {  background-color: #000000 !important;  color: #fff !important;}.labelstyle-000000.selected {  background-color: #000000 !important;  color: #fff !important;}.label-select-menu .labelstyle-000000.selected {  background:rgba(247, 247, 247, 1.0) !important;  color: #666666 !important;}
+</style>
+
+
+
+<div id="issues_next">
+    <div id="show_issue" class="js-issues-results">
+
+    
+
+  <div id="js-discussion-header" class="gh-header js-details-container js-socket-channel js-updatable-content js-issue-header issue" data-channel="jekyll/jekyll:issue:14209903" data-url="/jekyll/jekyll/issues/1074/show_partial?partial=title">
+
+  <div class="gh-header-show">
+    <div class="gh-header-actions">
+
+        <a href="https://github.com/jekyll/jekyll/issues/new" class="minibutton primary js-new-issue-button" data-hotkey="c">
+          New issue
+        </a>
+    </div>
+
+      <a class="gh-header-back js-history-back" href="https://github.com/jekyll/jekyll/issues" data-hotkey="u" title="Back to Issue list">
+        <span class="mega-octicon octicon-chevron-left"></span>
+      </a>
+
+    <h1 class="gh-header-title">
+      <span class="js-issue-title">New permalink behaviour is incompatible with existing sites on GH Pages</span>
+      <span class="gh-header-number">#1074</span>
+    </h1>
+  </div>
+
+
+  <div class="gh-header-meta">
+      <div class="gh-header-status closed">
+        <span class="octicon octicon-issue-closed"></span>
+        Closed
+      </div>
+
+      <a href="https://github.com/parkr" class="author">parkr</a> opened this <span class="noun">Issue</span> <time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T14:12:52-07:00" title="2013-05-10 16:12:52">11 months ago</time>
+      · 30 comments
+  </div>
+</div>
+
+
+    <div id="discussion_bucket" class="tab-content">
+      <div class="discussion-sidebar">
+        
+<div id="js-discussion-stats" class="discussion-stats js-socket-channel js-updatable-content" data-channel="jekyll/jekyll:issue:14209903" data-url="/jekyll/jekyll/issues/1074/show_partial?partial=discussion_stats">
+</div>
+
+
+<div class="discussion-sidebar-item sidebar-labels">
+  <div class="select-menu label-select-menu js-issue-show-label-select-menu js-menu-container js-select-menu" data-url="/jekyll/jekyll/issues/labels/modify_assignment" data-multiple="">
+    <form accept-charset="UTF-8" action="https://github.com/jekyll/jekyll/issues/labels/modify_assignment" method="post"><div style="margin:0;padding:0;display:inline"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="ZxJuYds68ntdpatAKKUnCrToMqEC96YsOMMGPzt28ck="></div>
+      
+<div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+
+  <div class="select-menu-modal">
+    <div class="select-menu-header">
+      <span class="select-menu-title">Apply labels to this issue</span>
+      <span class="octicon octicon-remove-close js-menu-close"></span>
+    </div> <!-- /.select-menu-header -->
+
+    <div class="select-menu-error-shell">
+      <span class="select-menu-error js-select-menu-error">Whoops, there was an error</span>
+    </div>
+
+    <div class="select-menu-filters">
+      <div class="select-menu-text-filter">
+        <input type="text" id="label-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter labels" autocomplete="off">
+      </div>
+    </div> <!-- /.select-menu-filters -->
+
+    <div class="select-menu-list" data-filterable-for="label-filter-field" data-filterable-type="substring">
+
+      <div class="select-menu-item js-navigation-item labelstyle-d41313  selected">
+        <span class="select-menu-item-icon octicon octicon-check"></span>
+        <div class="select-menu-item-text">
+          <div class="color-label-wrapper">
+            <div data-name="Bug" class="color-label labelstyle-d41313">
+              <input style="display: none" type="checkbox" value="Bug" name="labels[]" checked="checked">
+              <span class="color" style="background-color: #d41313"></span>
+              <span class="name">Bug</span>
+              <span class="octicon octicon-remove-close"></span>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /.select-menu-item -->
+      <div class="select-menu-item js-navigation-item labelstyle-fbca04 ">
+        <span class="select-menu-item-icon octicon octicon-check"></span>
+        <div class="select-menu-item-text">
+          <div class="color-label-wrapper">
+            <div data-name="Discussion" class="color-label labelstyle-fbca04">
+              <input style="display: none" type="checkbox" value="Discussion" name="labels[]">
+              <span class="color" style="background-color: #fbca04"></span>
+              <span class="name">Discussion</span>
+              <span class="octicon octicon-remove-close"></span>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /.select-menu-item -->
+      <div class="select-menu-item js-navigation-item labelstyle-bfdadc  selected">
+        <span class="select-menu-item-icon octicon octicon-check"></span>
+        <div class="select-menu-item-text">
+          <div class="color-label-wrapper">
+            <div data-name="Documentation" class="color-label labelstyle-bfdadc">
+              <input style="display: none" type="checkbox" value="Documentation" name="labels[]" checked="checked">
+              <span class="color" style="background-color: #bfdadc"></span>
+              <span class="name">Documentation</span>
+              <span class="octicon octicon-remove-close"></span>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /.select-menu-item -->
+      <div class="select-menu-item js-navigation-item labelstyle-5D76CB ">
+        <span class="select-menu-item-icon octicon octicon-check"></span>
+        <div class="select-menu-item-text">
+          <div class="color-label-wrapper">
+            <div data-name="Enhancement" class="color-label labelstyle-5D76CB">
+              <input style="display: none" type="checkbox" value="Enhancement" name="labels[]">
+              <span class="color" style="background-color: #5D76CB"></span>
+              <span class="name">Enhancement</span>
+              <span class="octicon octicon-remove-close"></span>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /.select-menu-item -->
+      <div class="select-menu-item js-navigation-item labelstyle-1d870c ">
+        <span class="select-menu-item-icon octicon octicon-check"></span>
+        <div class="select-menu-item-text">
+          <div class="color-label-wrapper">
+            <div data-name="Feature" class="color-label labelstyle-1d870c">
+              <input style="display: none" type="checkbox" value="Feature" name="labels[]">
+              <span class="color" style="background-color: #1d870c"></span>
+              <span class="name">Feature</span>
+              <span class="octicon octicon-remove-close"></span>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /.select-menu-item -->
+      <div class="select-menu-item js-navigation-item labelstyle-FF7D40 ">
+        <span class="select-menu-item-icon octicon octicon-check"></span>
+        <div class="select-menu-item-text">
+          <div class="color-label-wrapper">
+            <div data-name="Fix" class="color-label labelstyle-FF7D40">
+              <input style="display: none" type="checkbox" value="Fix" name="labels[]">
+              <span class="color" style="background-color: #FF7D40"></span>
+              <span class="name">Fix</span>
+              <span class="octicon octicon-remove-close"></span>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /.select-menu-item -->
+      <div class="select-menu-item js-navigation-item labelstyle-e10c02 ">
+        <span class="select-menu-item-icon octicon octicon-check"></span>
+        <div class="select-menu-item-text">
+          <div class="color-label-wrapper">
+            <div data-name="Needs Decision" class="color-label labelstyle-e10c02">
+              <input style="display: none" type="checkbox" value="Needs Decision" name="labels[]">
+              <span class="color" style="background-color: #e10c02"></span>
+              <span class="name">Needs Decision</span>
+              <span class="octicon octicon-remove-close"></span>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /.select-menu-item -->
+      <div class="select-menu-item js-navigation-item labelstyle-9713f5 ">
+        <span class="select-menu-item-icon octicon octicon-check"></span>
+        <div class="select-menu-item-text">
+          <div class="color-label-wrapper">
+            <div data-name="Question" class="color-label labelstyle-9713f5">
+              <input style="display: none" type="checkbox" value="Question" name="labels[]">
+              <span class="color" style="background-color: #9713f5"></span>
+              <span class="name">Question</span>
+              <span class="octicon octicon-remove-close"></span>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /.select-menu-item -->
+      <div class="select-menu-item js-navigation-item labelstyle-fef2c0 ">
+        <span class="select-menu-item-icon octicon octicon-check"></span>
+        <div class="select-menu-item-text">
+          <div class="color-label-wrapper">
+            <div data-name="Refactor" class="color-label labelstyle-fef2c0">
+              <input style="display: none" type="checkbox" value="Refactor" name="labels[]">
+              <span class="color" style="background-color: #fef2c0"></span>
+              <span class="name">Refactor</span>
+              <span class="octicon octicon-remove-close"></span>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /.select-menu-item -->
+      <div class="select-menu-item js-navigation-item labelstyle-2b1fcf ">
+        <span class="select-menu-item-icon octicon octicon-check"></span>
+        <div class="select-menu-item-text">
+          <div class="color-label-wrapper">
+            <div data-name="Suggestion" class="color-label labelstyle-2b1fcf">
+              <input style="display: none" type="checkbox" value="Suggestion" name="labels[]">
+              <span class="color" style="background-color: #2b1fcf"></span>
+              <span class="name">Suggestion</span>
+              <span class="octicon octicon-remove-close"></span>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /.select-menu-item -->
+      <div class="select-menu-item js-navigation-item labelstyle-000000 ">
+        <span class="select-menu-item-icon octicon octicon-check"></span>
+        <div class="select-menu-item-text">
+          <div class="color-label-wrapper">
+            <div data-name="Won&#39;t Fix" class="color-label labelstyle-000000">
+              <input style="display: none" type="checkbox" value="Won&#39;t Fix" name="labels[]">
+              <span class="color" style="background-color: #000000"></span>
+              <span class="name">Won't Fix</span>
+              <span class="octicon octicon-remove-close"></span>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /.select-menu-item -->
+
+    </div> <!-- /.select-menu-list -->
+
+    <div class="select-menu-no-results js-not-filterable">Nothing to show</div>
+
+
+    <div class="select-menu-loading-overlay">Loading…</div>
+  </div> <!-- /.select-menu-modal -->
+</div> <!-- /.select-menu-modal-holder -->
+
+      <input type="hidden" class="js-issue-number" name="issues[]" value="1074">
+
+      <h3 class="discussion-sidebar-heading">
+        Labels
+      </h3>
+</form>  </div>
+
+  <div class="labels css-truncate js-timeline-label-list">
+    <span class="label css-truncate-target labelstyle-d41313" title="Bug">Bug</span>
+
+    <span class="label css-truncate-target labelstyle-bfdadc" title="Documentation">Documentation</span>
+</div>
+</div>
+
+<div class="discussion-sidebar-item sidebar-milestone">
+  <div class="select-menu js-menu-container js-select-menu js-milestone-picker is-showing-clear-item js-load-contents" data-contents-url="/jekyll/jekyll/issues/1074/show_partial?partial=milestone_select_menu">
+      <h3 class="discussion-sidebar-heading">
+      Milestone
+    </h3>
+
+  </div> <!-- /.select-menu -->
+
+  <span class="js-milestone-infobar-item-wrapper">
+    
+  <span class="progress-bar"><span class="progress" style="width: 100.0%">&nbsp;</span></span>
+    <a title="1.0.2" href="https://github.com/jekyll/jekyll/issues?milestone=5&state=closed" class="milestone-name css-truncate">
+      <span class="css-truncate-target">1.0.2</span>
+  </a>
+
+  </span>
+</div>
+
+<div class="discussion-sidebar-item sidebar-assignee">
+  <div class="select-menu js-menu-container js-select-menu js-assignee-picker js-assignee-picker-next  js-load-contents" data-contents-url="/jekyll/jekyll/issues/1074/show_partial?partial=assignee_select_menu">
+      <h3 class="discussion-sidebar-heading">
+      Assignee
+    </h3>
+
+  </div> <!-- /.select-menu -->
+
+  <span class="css-truncate js-assignee-infobar-item-wrapper">
+      <span class="text-muted">No one assigned</span>
+  </span>
+</div>
+
+
+  <div class="discussion-sidebar-item sidebar-notifications">
+    <h3 class="discussion-sidebar-heading">Notifications</h3>
+    <div class="thread-subscription-status js-thread-subscription-status js-socket-channel js-updatable-content" data-channel="jekyll/jekyll:thread-subscription:14209903:tararoys" data-url="/notifications/thread_subscription?repository_id=65252&amp;thread_class=Issue&amp;thread_id=14209903">
+
+  <span class="mega-octicon octicon-radio-tower"></span>
+
+  <span class="tooltipped tooltipped-w thread-subscription-help hidden" aria-label="You only receive notifications for this thread when you participate or are @mentioned."><span class="octicon octicon-question"></span></span>
+
+  <form accept-charset="UTF-8" action="https://github.com/notifications/thread" class="thread-subscribe-form" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="ZxJuYds68ntdpatAKKUnCrToMqEC96YsOMMGPzt28ck="></div>    <input type="hidden" name="repository_id" value="65252">
+    <input type="hidden" name="thread_id" value="14209903">
+    <input type="hidden" name="thread_class" value="Issue">
+    <input type="hidden" name="id" value="subscribe">
+
+    <button class="minibutton" type="submit" data-disable-with="">
+      <span class="octicon octicon-eye-watch"></span>
+      Subscribe
+    </button>
+</form>
+  <p class="reason">You only receive notifications for this thread when you participate or are @mentioned.</p>
+</div>
+
+
+  </div>
+
+<div class="discussion-sidebar-item">
+  
+<div id="js-users-participants" class="js-socket-channel js-updatable-content" data-channel="jekyll/jekyll:issue:14209903" data-url="/jekyll/jekyll/issues/1074/show_partial?partial=participants">
+  <div class="participation">
+
+    <h3 class="discussion-sidebar-heading">
+      5 participants
+    </h3>
+    <div class="participation-avatars">
+        <a class="participant-avatar tooltipped tooltipped-s" aria-label="parkr" href="https://github.com/parkr"><img alt="Parker Moore" class="avatar js-avatar" data-user="237985" height="20" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="20"></a>
+        <a class="participant-avatar tooltipped tooltipped-s" aria-label="benbalter" href="https://github.com/benbalter"><img alt="Ben Balter" class="avatar js-avatar" data-user="282759" height="20" src="./03-where-the-heck-is-the-irc-channel_files/282759" width="20"></a>
+        <a class="participant-avatar tooltipped tooltipped-s" aria-label="zephod" href="https://github.com/zephod"><img alt="Tom Rees" class="avatar js-avatar" data-user="92938" height="20" src="./03-where-the-heck-is-the-irc-channel_files/92938" width="20"></a>
+        <a class="participant-avatar tooltipped tooltipped-s" aria-label="zachgersh" href="https://github.com/zachgersh"><img alt="Zach" class="avatar js-avatar" data-user="689411" height="20" src="./03-where-the-heck-is-the-irc-channel_files/689411" width="20"></a>
+        <a class="participant-avatar tooltipped tooltipped-s" aria-label="uberbuilder" href="https://github.com/uberbuilder"><img alt="Jeremy Iglehart" class="avatar js-avatar" data-user="222294" height="20" src="./03-where-the-heck-is-the-irc-channel_files/222294" width="20"></a>
+    </div>
+  </div>
+</div>
+
+<div id="pr_contributors_box" style="display:none">
+  <h2 class="facebox-header">People participating in this issue</h2>
+  <ul class="facebox-user-list">
+    <li class="facebox-user-list-item">
+      <img alt="Parker Moore" class=" js-avatar" data-user="237985" height="24" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="24">
+      <a href="https://github.com/parkr">parkr</a>
+    </li>
+    <li class="facebox-user-list-item">
+      <img alt="Ben Balter" class=" js-avatar" data-user="282759" height="24" src="./03-where-the-heck-is-the-irc-channel_files/282759" width="24">
+      <a href="https://github.com/benbalter">benbalter</a>
+    </li>
+    <li class="facebox-user-list-item">
+      <img alt="Tom Rees" class=" js-avatar" data-user="92938" height="24" src="./03-where-the-heck-is-the-irc-channel_files/92938" width="24">
+      <a href="https://github.com/zephod">zephod</a>
+    </li>
+    <li class="facebox-user-list-item">
+      <img alt="Zach" class=" js-avatar" data-user="689411" height="24" src="./03-where-the-heck-is-the-irc-channel_files/689411" width="24">
+      <a href="https://github.com/zachgersh">zachgersh</a>
+    </li>
+    <li class="facebox-user-list-item">
+      <img alt="Jeremy Iglehart" class=" js-avatar" data-user="222294" height="24" src="./03-where-the-heck-is-the-irc-channel_files/222294" width="24">
+      <a href="https://github.com/uberbuilder">uberbuilder</a>
+    </li>
+  </ul>
+</div>
+
+
+</div>
+
+      </div>
+
+      <div class="discussion-timeline js-quote-selection-container">
+
+        <div class="js-discussion js-socket-channel" data-channel="jekyll/jekyll:marked-as-read:14209903">
+          
+
+
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/parkr"><img alt="Parker Moore" class="timeline-comment-avatar js-avatar" data-user="237985" height="48" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issue-14209903" class="comment js-comment js-task-list-container" data-body-version="1e362dcaff72e29986b6ff74a260dc69">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/parkr" class="author">parkr</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issue-14209903" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T14:12:52-07:00" title="2013-05-10 16:12:52">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>no idea what is happening with the new page-based docs, but GH Pages isn't rendering the docs at all, it appears. I get 404's for everything.</p>
+
+<p><em>update</em>: new permalink behaviour will break pages for existing sites built with &lt; 1.0</p>
+
+<p>//cc <a href="https://github.com/benbalter" class="user-mention">@benbalter</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/benbalter"><img alt="Ben Balter" class="timeline-comment-avatar js-avatar" data-user="282759" height="48" src="./03-where-the-heck-is-the-irc-channel_files/282759" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17745303" class="comment js-comment js-task-list-container" data-body-version="e9bfad0d60eaae2b3a8e3c2989fe277d">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/benbalter" class="author">benbalter</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17745303" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T14:22:03-07:00" title="2013-05-10 16:22:03">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>On master? Working for me via <code>rake site:preview</code></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/benbalter"><img alt="Ben Balter" class="timeline-comment-avatar js-avatar" data-user="282759" height="48" src="./03-where-the-heck-is-the-irc-channel_files/282759" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17745349" class="comment js-comment js-task-list-container" data-body-version="03c07d840bcaa0851973a06600d99a05">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/benbalter" class="author">benbalter</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17745349" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T14:22:53-07:00" title="2013-05-10 16:22:53">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>Just kidding. Wrong remote. Looking into it.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/benbalter"><img alt="Ben Balter" class="timeline-comment-avatar js-avatar" data-user="282759" height="48" src="./03-where-the-heck-is-the-irc-channel_files/282759" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17745642" class="comment js-comment js-task-list-container" data-body-version="6fc923e54ae20176c98015464c138161">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/benbalter" class="author">benbalter</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17745642" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T14:29:32-07:00" title="2013-05-10 16:29:32">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p><code>/docs/</code> had a strange meta refresh to <code>/docs/home</code>. Site is building fine, just no index to <code>/docs</code></p>
+
+<p>Options:</p>
+
+<ol>
+<li>Add meta refresh from <code>/docs/</code> to <code>/docs/home</code>
+</li>
+<li>Make default <code>/docs</code>
+</li>
+<li>Make default <code>/docs/home</code> (optionally with meta refresh to fix old links.)</li>
+</ol>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/zephod"><img alt="Tom Rees" class="timeline-comment-avatar js-avatar" data-user="92938" height="48" src="./03-where-the-heck-is-the-irc-channel_files/92938" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-17746389" class="comment js-comment js-task-list-container" data-body-version="287a38d22f01466a98e2bb252ea13b97">
+      <div class="timeline-comment-header ">
+
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/zephod" class="author">zephod</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17746389" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T14:47:17-07:00" title="2013-05-10 16:47:17">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>:-( Coming to build a Jekyll site with some time spare, and all the docs have just exploded?!</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/benbalter"><img alt="Ben Balter" class="timeline-comment-avatar js-avatar" data-user="282759" height="48" src="./03-where-the-heck-is-the-irc-channel_files/282759" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17746543" class="comment js-comment js-task-list-container" data-body-version="1fe9791a00b7b4f9c3339ea6cbe1a903">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/benbalter" class="author">benbalter</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17746543" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T14:51:39-07:00" title="2013-05-10 16:51:39">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p><a href="https://github.com/parkr" class="user-mention">@parkr</a> something's wrong with the deploy... it has an index.html that I don't see on HEAD</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/benbalter"><img alt="Ben Balter" class="timeline-comment-avatar js-avatar" data-user="282759" height="48" src="./03-where-the-heck-is-the-irc-channel_files/282759" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17746716" class="comment js-comment js-task-list-container" data-body-version="3ad19fcb337d3fb72fea61afb779fdbb">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/benbalter" class="author">benbalter</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17746716" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T14:56:06-07:00" title="2013-05-10 16:56:06">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>Just need to remove <code>docs/index.html</code> then <code>/docs</code> should properly generate </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/zachgersh"><img alt="Zach" class="timeline-comment-avatar js-avatar" data-user="689411" height="48" src="./03-where-the-heck-is-the-irc-channel_files/689411" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-17746823" class="comment js-comment js-task-list-container" data-body-version="a299fbcd4569d7b61ca006e63c089e2a">
+      <div class="timeline-comment-header ">
+
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/zachgersh" class="author">zachgersh</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17746823" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T14:59:10-07:00" title="2013-05-10 16:59:10">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p style="
+    background: orange;
+"><a href="https://github.com/zephod" class="user-mention">@zephod</a> if you need help getting started you can just jump on the irc channel.  Someone can help you out there as well :)</p>
+
+<p>I am sure <a href="https://github.com/parkr" class="user-mention">@parkr</a> will fix the docs shortly now that <a href="https://github.com/benbalter" class="user-mention">@benbalter</a> has tracked down the issue.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/benbalter"><img alt="Ben Balter" class="timeline-comment-avatar js-avatar" data-user="282759" height="48" src="./03-where-the-heck-is-the-irc-channel_files/282759" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17747184" class="comment js-comment js-task-list-container" data-body-version="8b111412aa4d50e936cd34afd2221876">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/benbalter" class="author">benbalter</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17747184" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:07:41-07:00" title="2013-05-10 17:07:41">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p><a href="https://github.com/parkr" class="user-mention">@parkr</a> also need to kill <code>_posts</code> folder. </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/parkr"><img alt="Parker Moore" class="timeline-comment-avatar js-avatar" data-user="237985" height="48" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17747594" class="comment js-comment js-task-list-container" data-body-version="084edd84001a4b6c522cf815bfb84c9d">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/parkr" class="author">parkr</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17747594" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:18:50-07:00" title="2013-05-10 17:18:50">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>Wait so remove docs/index.html and _posts?</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/parkr"><img alt="Parker Moore" class="timeline-comment-avatar js-avatar" data-user="237985" height="48" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17747710" class="comment js-comment js-task-list-container" data-body-version="9ad79543661d41fb426cc0d8641eee8d">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/parkr" class="author">parkr</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17747710" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:22:39-07:00" title="2013-05-10 17:22:39">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>Done and pushed. Here's hoping it works!</p>
+
+<p><a href="https://github.com/benbalter" class="user-mention">@benbalter</a> It would be freaking amazing if GH Pages sent the last committer an email if a build broke. That wasn't the problem here (it's our <code>rake site:publish</code> command), but as an idea!</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/benbalter"><img alt="Ben Balter" class="timeline-comment-avatar js-avatar" data-user="282759" height="48" src="./03-where-the-heck-is-the-irc-channel_files/282759" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17747732" class="comment js-comment js-task-list-container" data-body-version="abcdb68fc307dc4edecedbf393929b38">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/benbalter" class="author">benbalter</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17747732" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:23:12-07:00" title="2013-05-10 17:23:12">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>on <code>gh-pages</code> branch</p>
+
+<ol>
+<li>delete <code>_posts</code>
+</li>
+<li>delete <code>docs/index.html</code>
+</li>
+<li>Figure out if you want the docs url to be <code>/docs</code> or <code>/docs/help</code>, and update acordingly</li>
+<li>Figure out if we need to do anything so the rake script doesn't re-break.</li>
+</ol>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/benbalter"><img alt="Ben Balter" class="timeline-comment-avatar js-avatar" data-user="282759" height="48" src="./03-where-the-heck-is-the-irc-channel_files/282759" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17747822" class="comment js-comment js-task-list-container" data-body-version="d334ebe797796f1c9e514611b679e1f1">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/benbalter" class="author">benbalter</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17747822" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:25:44-07:00" title="2013-05-10 17:25:44">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p><a href="http://jekyllrb.com/docs/docs/home/">http://jekyllrb.com/docs/docs/home/</a></p>
+
+<p><a href="https://github.com/jekyll/jekyll/issues/987" class="issue-link" title="Permalink behavior changed in 1.0">#987</a></p>
+
+<p>Got bit by our own bug. This is what I was talking about. It's a big breaking change.</p>
+
+<p>Have to set permalink to <code>/foo</code> for now, then switch to <code>/docs/foo</code> post upgrade.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/parkr"><img alt="Parker Moore" class="timeline-comment-avatar js-avatar" data-user="237985" height="48" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17747828" class="comment js-comment js-task-list-container" data-body-version="32e61d572bbe1f93bf0614b97c8b1fea">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/parkr" class="author">parkr</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17747828" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:25:52-07:00" title="2013-05-10 17:25:52">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <ol>
+<li>done</li>
+<li>done</li>
+<li>i guess <code>/docs/</code> makes more sense than <code>/docs/home/</code> now that they're page-based.</li>
+<li>it's a matter of deleting where needed. should probably nuke everything but the <code>.git</code> directory and <code>.gitignore</code> file in my <code>gh-pages</code> clone and copy the new stuff so things don't go crazy again</li>
+</ol>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/parkr"><img alt="Parker Moore" class="timeline-comment-avatar js-avatar" data-user="237985" height="48" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17747856" class="comment js-comment js-task-list-container" data-body-version="43304dc053c378b98ba2aa47cd3115f3">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/parkr" class="author">parkr</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17747856" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:26:35-07:00" title="2013-05-10 17:26:35">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p><a href="https://github.com/benbalter" class="user-mention">@benbalter</a> Based on the permalink structure? Maybe we should then switch it back.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/benbalter"><img alt="Ben Balter" class="timeline-comment-avatar js-avatar" data-user="282759" height="48" src="./03-where-the-heck-is-the-irc-channel_files/282759" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17747860" class="comment js-comment js-task-list-container" data-body-version="a480234d35f0a5e3b56a80254b265f48">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/benbalter" class="author">benbalter</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17747860" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:26:40-07:00" title="2013-05-10 17:26:40">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>And with the change, it won't run locally if you're running 1.0.1, PITA IMHO.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/benbalter"><img alt="Ben Balter" class="timeline-comment-avatar js-avatar" data-user="282759" height="48" src="./03-where-the-heck-is-the-irc-channel_files/282759" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17747879" class="comment js-comment js-task-list-container" data-body-version="91089fed1590ec4eea08cca4bed1f596">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/benbalter" class="author">benbalter</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17747879" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:27:04-07:00" title="2013-05-10 17:27:04">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>back meaning the permalink bug, or back meaning posts? if the latter, this is going to be a big pain point for lots of people.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/parkr"><img alt="Parker Moore" class="timeline-comment-avatar js-avatar" data-user="237985" height="48" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17747924" class="comment js-comment js-task-list-container" data-body-version="ab3fe5459e3144d905ace6b813d2f8c7">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/parkr" class="author">parkr</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17747924" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:28:19-07:00" title="2013-05-10 17:28:19">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>Back meaning the permalink bug.</p>
+
+<p>Also I though GH Pages was not running 1.x? ;) Let's fix this before you ship GH Pages. I can do it now.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/benbalter"><img alt="Ben Balter" class="timeline-comment-avatar js-avatar" data-user="282759" height="48" src="./03-where-the-heck-is-the-irc-channel_files/282759" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17747966" class="comment js-comment js-task-list-container" data-body-version="9756640017c12955f43d709408a9e6e1">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/benbalter" class="author">benbalter</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17747966" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:29:33-07:00" title="2013-05-10 17:29:33">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>Pages is 0.12.1rc2 to be exact, oddly. And I'm afraid if we upgrade Pages, we're going to break a lot of sites due to the permalink change. How hard of a fix is it?</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/parkr"><img alt="Parker Moore" class="timeline-comment-avatar js-avatar" data-user="237985" height="48" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17747989" class="comment js-comment js-task-list-container" data-body-version="ce3e7c5005e79f3f876c4a866e00e267">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/parkr" class="author">parkr</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17747989" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:30:12-07:00" title="2013-05-10 17:30:12">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>So according to the code, if we set a permalink, it should just take that permalink and go. The permalink is the URL.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/benbalter"><img alt="Ben Balter" class="timeline-comment-avatar js-avatar" data-user="282759" height="48" src="./03-where-the-heck-is-the-irc-channel_files/282759" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17748053" class="comment js-comment js-task-list-container" data-body-version="85de9f1cda7bddafa7ff6cd8f786b654">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/benbalter" class="author">benbalter</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17748053" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:31:42-07:00" title="2013-05-10 17:31:42">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>Right. so on &lt; 1.0, a post in <code>/docs/</code> with a permalink of <code>/foo</code> will render to <code>/docs/foo</code>. Post 1.0, a post in <code>/docs/</code> with a permalink of <code>/foo</code> will render to <code>/foo</code>.</p>
+
+<p>We have that bug in reverse. We're building locally on 1, where <code>/docs/foo</code>/ in <code>/docs/</code> renders to <code>/docs/foo</code> (ignoring the subdir) and Pages runs &lt; 1, where <code>/docs/foo</code> in <code>docs/</code> renders to <code>docs/docs/foo</code> (respecting the parent dir).</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/parkr"><img alt="Parker Moore" class="timeline-comment-avatar js-avatar" data-user="237985" height="48" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17748152" class="comment js-comment js-task-list-container" data-body-version="e844476b718c9a7f7ae6403175783022">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/parkr" class="author">parkr</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17748152" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:35:03-07:00" title="2013-05-10 17:35:03">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>Shouldn't be hard to "fix" it, but if we document the new behaviour, we should be ok, right? I think the new behaviour makes way more sense.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/parkr"><img alt="Parker Moore" class="timeline-comment-avatar js-avatar" data-user="237985" height="48" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17748200" class="comment js-comment js-task-list-container" data-body-version="551397ec4c86e42d7888bf5871d93922">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/parkr" class="author">parkr</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17748200" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:36:47-07:00" title="2013-05-10 17:36:47">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>PITA But Logical v. Expected But Kinda Dumb.</p>
+
+<p>I'm on the side of the plaintiffs in this one.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/zachgersh"><img alt="Zach" class="timeline-comment-avatar js-avatar" data-user="689411" height="48" src="./03-where-the-heck-is-the-irc-channel_files/689411" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-17748255" class="comment js-comment js-task-list-container" data-body-version="11675e75f3ab3626a53aed1779581c10">
+      <div class="timeline-comment-header ">
+
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/zachgersh" class="author">zachgersh</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17748255" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:38:43-07:00" title="2013-05-10 17:38:43">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>I also think this is one thing that you would definitively callout in the upgrading blog post for jekyll 1.0.  Would adding a flag that could change this behavior be an option so we support both?</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/parkr"><img alt="Parker Moore" class="timeline-comment-avatar js-avatar" data-user="237985" height="48" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17748307" class="comment js-comment js-task-list-container" data-body-version="2a613fc8b90939300d153adee976f595">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/parkr" class="author">parkr</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17748307" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:40:13-07:00" title="2013-05-10 17:40:13">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>I'd be against adding an option, but I'd definitely be <img class="emoji" title=":thumbsup:" alt=":thumbsup:" src="./03-where-the-heck-is-the-irc-channel_files/thumbsup.png" height="20" width="20" align="absmiddle"> on allowing users of GH Pages to choose between Jekyll &lt; 1.0 and Jekyll &gt;= 1.0.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/uberbuilder"><img alt="Jeremy Iglehart" class="timeline-comment-avatar js-avatar" data-user="222294" height="48" src="./03-where-the-heck-is-the-irc-channel_files/222294" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-17748333" class="comment js-comment js-task-list-container" data-body-version="dca664e0b5e1f46820ea000d72f19d2b">
+      <div class="timeline-comment-header ">
+
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/uberbuilder" class="author">uberbuilder</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17748333" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:41:05-07:00" title="2013-05-10 17:41:05">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>Small tangentical comment...  JEKYLL ROCKS - thank's so much for making it.</p>
+
+<p>I was sitting down to just add a config file to a project right before I ran out the door - and of course, the docs are down ;P - lol</p>
+
+<p>I'll be watching closely as you make updates.  I hope it works tonight :D</p>
+
+<p>Good luck!</p>
+
+<p>P.S. I love the new design of the Jekyllrb.com stuff - very classy <img class="emoji" title=":+1:" alt=":+1:" src="./03-where-the-heck-is-the-irc-channel_files/+1.png" height="20" width="20" align="absmiddle"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/parkr"><img alt="Parker Moore" class="timeline-comment-avatar js-avatar" data-user="237985" height="48" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17748676" class="comment js-comment js-task-list-container" data-body-version="7f6cb10c4a52a0674fc732436fc26caf">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/parkr" class="author">parkr</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17748676" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:53:34-07:00" title="2013-05-10 17:53:34">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p><a href="https://github.com/uberbuilder" class="user-mention">@uberbuilder</a> Working on it :)</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/uberbuilder"><img alt="Jeremy Iglehart" class="timeline-comment-avatar js-avatar" data-user="222294" height="48" src="./03-where-the-heck-is-the-irc-channel_files/222294" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-17748861" class="comment js-comment js-task-list-container" data-body-version="c72b11ccb008821d910e1108c64a0466">
+      <div class="timeline-comment-header ">
+
+
+
+        <div class="timeline-comment-header-text">
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17748861" class="comment-type-icon octicon octicon-mail-read" title="This comment left via email reply."></a>
+          <strong>
+            <a href="https://github.com/uberbuilder" class="author">uberbuilder</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17748861" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T15:59:58-07:00" title="2013-05-10 17:59:58">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body email-format js-comment-body">
+            <div class="email-fragment">I owe you a beer my friend... more than one. <img class="emoji" title=":beer:" alt=":beer:" src="./03-where-the-heck-is-the-irc-channel_files/beer.png" height="20" width="20" align="absmiddle">
+
+Jekyll has saved me so much time, and money... It's changed my whole career.
+
+Good luck dude, and there is no rush on my side of things. I'm sure you
+will get things fixed plenty fast. I'm on my way to a play right now.
+
+Besides, my Googlefoo will solve my problems tonight if your site is still
+down.
+
+Wish I could help you right now...</div>
+<span class="email-hidden-toggle"><a href="https://github.com/jekyll/jekyll/issues/1074#">…</a></span><div class="email-hidden-reply" style="display:none">
+<div class="email-quoted-reply">On May 10, 2013 6:53 PM, "Parker Moore" &lt;notifications@github.com&gt; wrote:
+ <a href="https://github.com/uberbuilder" class="user-mention">@uberbuilder</a> &lt;<a href="https://github.com/uberbuilder">https://github.com/uberbuilder</a>&gt; Working on it :)
+
+ —
+ Reply to this email directly or view it on GitHub&lt;<a href="https://github.com/mojombo/jekyll/issues/1074#issuecomment-17748676">https://github.com/mojombo/jekyll/issues/1074#issuecomment-17748676</a>&gt;
+ .
+</div>
+</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/zachgersh"><img alt="Zach" class="timeline-comment-avatar js-avatar" data-user="689411" height="48" src="./03-where-the-heck-is-the-irc-channel_files/689411" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-17749117" class="comment js-comment js-task-list-container" data-body-version="03f46641d0d09a01b908e644aa3afe28">
+      <div class="timeline-comment-header ">
+
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/zachgersh" class="author">zachgersh</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17749117" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T16:09:16-07:00" title="2013-05-10 18:09:16">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p><a href="https://github.com/parkr" class="user-mention">@parkr</a> having a user select between different versions of GH pages wouldn't be a great idea, they'd have to figure out what the differences were between the two different versions.  Mass upgrades for all.</p>
+
+<p>I definitely believe the new behavior is better but I am struggling with the fact that we are definitely going to break quite a few sites when this gets rolled.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/parkr"><img alt="Parker Moore" class="timeline-comment-avatar js-avatar" data-user="237985" height="48" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17749290" class="comment js-comment js-task-list-container" data-body-version="fc6817332e4e10b4e8ba5e9a7e5f8d61">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/parkr" class="author">parkr</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17749290" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-10T16:15:53-07:00" title="2013-05-10 18:15:53">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p><a href="https://github.com/uberbuilder" class="user-mention">@uberbuilder</a> I don't deserve any of that credit. All credit belongs to the tremendous <a href="https://github.com/mojombo" class="user-mention">@mojombo</a> and <a href="https://github.com/qrush" class="user-mention">@qrush</a>. They made this thing – I'm just helping out.</p>
+
+<p><a href="https://github.com/zachgersh" class="user-mention">@zachgersh</a> Yeah, we killed that idea. Talking with Ben in IRC now to try to find a solution.</p>
+
+<p>So here's my thing about releasing 1.0: as it's a major version bump, it should be expected to have breaking changes. Writing an always-backwards-compatible piece of software makes my head spin.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  
+
+    
+  <div class="discussion-item discussion-item-ref">
+    <div class="discussion-item-header" id="ref-issue-14221839">
+      <span class="octicon octicon-bookmark discussion-item-icon"></span>
+
+      <img alt="Ben Balter" class="avatar js-avatar" data-user="282759" height="16" src="./03-where-the-heck-is-the-irc-channel_files/282759" width="16">
+      <a href="https://github.com/benbalter" class="author" truncate="true">benbalter</a>
+
+      referenced
+      this issue
+      <a class="timestamp" href="https://github.com/jekyll/jekyll/issues/1074#ref-issue-14221839">
+        <time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-11T07:00:22-07:00" title="2013-05-11 09:00:22">11 months ago</time>
+      </a>
+
+    </div>
+
+      <span class="state-indicator closed">
+        Closed
+      </span>
+
+    <h3 class="title">
+      <a href="https://github.com/jekyll/jekyll/issues/1077">
+        Issue #1077:
+        Smoother upgrade path for 1.0.x permalinks
+</a>    </h3>
+    
+  </div>
+
+    
+
+
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="https://github.com/parkr"><img alt="Parker Moore" class="timeline-comment-avatar js-avatar" data-user="237985" height="48" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="48"></a>
+    
+<div class="timeline-comment timeline-comment-owner-comment">
+  <div id="issuecomment-17775707" class="comment js-comment js-task-list-container" data-body-version="be42548b2b1b042bb2c2b939070ba9b8">
+      <div class="timeline-comment-header ">
+
+
+          <span class="timeline-comment-label">Owner</span>
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="https://github.com/parkr" class="author">parkr</a>
+          </strong>
+
+          commented
+
+            <a href="https://github.com/jekyll/jekyll/issues/1074#issuecomment-17775707" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-12T03:15:47-07:00" title="2013-05-12 05:15:47">11 months ago</time></a>
+        </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>Fixed with merge of <a href="https://github.com/jekyll/jekyll/pull/1081" class="issue-link" title="Backwards-compatibilize relative permalinks">#1081</a>. I added <code>relative_permalinks: false</code> in the site's <code>_config.yml</code>.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  
+
+    
+
+
+
+
+<div class="discussion-item discussion-item-closed">
+  <div class="discussion-item-header">
+    <span class="octicon octicon-circle-slash discussion-item-icon"></span>
+    <img alt="Parker Moore" class="avatar js-avatar" data-user="237985" height="16" src="./03-where-the-heck-is-the-irc-channel_files/237985" width="16">
+    <a href="https://github.com/parkr" class="author">parkr</a>
+    closed this   <time class="js-relative-date timestamp" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-05-12T03:15:48-07:00" title="2013-05-12 05:15:48">11 months ago</time>
+    
+  </div>
+</div>
+
+  <div class="closed-banner"></div>
+
+
+
+
+
+<!-- Rendered timeline since 2013-05-12 03:15:48 -->
+<div id="js-timeline-marker" class="js-socket-channel js-updatable-content" data-channel="jekyll/jekyll:issue:14209903" data-url="/jekyll/jekyll/issues/1074/show_partial?partial=timeline_marker&amp;since=1368353748" data-mark-as-read-url="/jekyll/jekyll/notifications/mark?ids=10839639" data-last-modified="Sun, 12 May 2013 10:15:48 GMT">
+</div>
+
+
+        </div>
+
+        <div class="discussion-timeline-actions">
+            
+
+<div class="timeline-comment-wrapper timeline-new-comment js-comment-container">
+  <a href="https://github.com/tararoys"><img alt="tararoys" class="timeline-comment-avatar js-avatar" data-user="1163925" height="48" src="./03-where-the-heck-is-the-irc-channel_files/1163925" width="48"></a>
+
+  <form accept-charset="UTF-8" action="https://github.com/jekyll/jekyll/issue_comments" class="js-new-comment-form" data-remote="true" data-type="json" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="ZxJuYds68ntdpatAKKUnCrToMqEC96YsOMMGPzt28ck="></div>
+    <div class="timeline-comment">
+      <input type="hidden" name="issue" value="1074">
+      
+
+<div class="js-previewable-comment-form previewable-comment-form write-selected" data-preview-url="/preview?repository=65252">
+  <div class="comment-form-head tabnav">
+    <ul class="tabnav-tabs">
+      <li><a href="https://github.com/jekyll/jekyll/issues/1074#write_bucket_149" class="tabnav-tab write-tab js-write-tab selected">Write</a></li>
+      <li><a href="https://github.com/jekyll/jekyll/issues/1074#preview_bucket_149" class="tabnav-tab preview-tab js-preview-tab">Preview</a></li>
+    </ul>
+    <span class="tabnav-right">
+      <span class="tabnav-widget text">Comments are parsed with <a href="https://help.github.com/articles/github-flavored-markdown" class="gfm-help" target="_blank">GitHub Flavored Markdown</a></span>
+    </span>
+  </div>
+
+<div class="comment-form-error js-comment-form-error" style="display:none">    There was an error creating your Issue: 
+</div>
+  <div id="write_bucket_149" class="write-content js-write-bucket js-uploadable-container js-upload-markdown-image upload-enabled is-default" data-upload-policy-url="/upload/policies/assets">
+    
+<a href="https://github.com/jekyll/jekyll/issues/1074#fullscreen_comment_body_149" class="enable-fullscreen js-enable-fullscreen tooltipped
+  tooltipped-w " aria-label="Zen Mode">
+  <span class="octicon octicon-screen-full"></span>
+</a>
+
+    <textarea name="comment[body]" tabindex="1" id="comment_body_149" placeholder="Leave a comment" class="comment-form-textarea js-comment-field js-size-to-fit js-quote-selection-target input-with-fullscreen-icon" data-suggester="149_new_preview_suggester"></textarea>
+
+    
+  <p class="drag-and-drop">
+    <span class="default">
+        Attach images by dragging &amp; dropping,
+        <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+        <a class="manual-file-chooser-text" href="https://github.com/jekyll/jekyll/issues/1074#">selecting them</a>, or pasting
+        from the clipboard.
+    </span>
+    <span class="loading">
+      <img alt="Octocat-spinner-32" height="16" src="./03-where-the-heck-is-the-irc-channel_files/octocat-spinner-32.gif" width="16"> Uploading your images…
+    </span>
+    <span class="error bad-file">
+      Unfortunately, we don't support that file type.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="https://github.com/jekyll/jekyll/issues/1074#">Try again</a> with a PNG, GIF, or JPG.
+      </span>
+    </span>
+    <span class="error too-big">
+      Yowza, that's a big file.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="https://github.com/jekyll/jekyll/issues/1074#">Try again</a> with an image file smaller than 10MB.
+      </span>
+    </span>
+    <span class="error bad-browser">
+      This browser doesn't support image attachments.
+      <span class="drag-and-drop-error-info">
+        We recommend updating to the latest
+        <a href="http://windows.microsoft.com/ie">Internet Explorer</a>,
+        <a href="https://chrome.google.com/">Google Chrome</a>, or
+        <a href="https://www.mozilla.org/firefox">Firefox</a>.
+      </span>
+    </span>
+    <span class="error failed-request">
+      Something went really wrong, and we can't process that image.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="https://github.com/jekyll/jekyll/issues/1074#">Try again.</a>
+      </span>
+    </span>
+  </p>
+
+  </div>
+  <div id="preview_bucket_149" class="preview-content js-preview-bucket">
+    
+
+  <div id="openstruct-70098818469040" class="comment js-comment js-task-list-container" data-body-version="">
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body  js-comment-body">
+            <p>Nothing to preview</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  </div>
+
+
+  <div class="suggester-container">
+    <div class="suggester js-navigation-container" id="149_new_preview_suggester" data-url="/jekyll/jekyll/suggestions/issue/14209903">
+    </div>
+  </div>
+</div>
+
+      <div class="form-actions">
+        
+<div id="js-new-comment-form-actions" class="js-socket-channel js-updatable-content" data-channel="jekyll/jekyll:issue:14209903:state" data-url="/jekyll/jekyll/issues/1074/show_partial?partial=form_actions">
+
+
+  
+
+
+  <button type="submit" class="button primary" tabindex="2" data-disable-with="">
+    Comment
+  </button>
+</div>
+
+      </div>
+    </div>
+</form></div>
+
+        </div>
+      </div><!-- /.discussion-timeline -->
+
+    </div><!-- /#discussion_bucket -->
+    <div class="clear"></div>
+  </div>
+
+</div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com/">API</a></li>
+      <li><a href="http://training.github.com/">Training</a></li>
+      <li><a href="http://shop.github.com/">Shop</a></li>
+      <li><a href="https://github.com/blog">Blog</a></li>
+      <li><a href="https://github.com/about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com/">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>© 2014 <span title="0.30406s from github-fe133-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy">Privacy</a></li>
+        <li><a href="https://github.com/security">Security</a></li>
+        <li><a href="https://github.com/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+          <div class="suggester-container">
+              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester" data-url="/jekyll/jekyll/suggestions/issue/14209903">
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="https://github.com/jekyll/jekyll/issues/1074#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="https://github.com/jekyll/jekyll/issues/1074#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w" aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="https://github.com/jekyll/jekyll/issues/1074#" class="octicon octicon-remove-close close js-ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+  
+
+
+<div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" style="position: absolute; left: 0px; top: -9999px; width: 15px; height: 15px; z-index: 999999999;">      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" width="100%" height="100%">         <param name="movie" value="https://github.global.ssl.fastly.net/flash/ZeroClipboard.v1.3.2.swf">         <param name="allowScriptAccess" value="always">         <param name="scale" value="exactfit">         <param name="loop" value="false">         <param name="menu" value="false">         <param name="quality" value="best">         <param name="bgcolor" value="#ffffff">         <param name="wmode" value="transparent">         <param name="flashvars" value="trustedOrigins=github.com%2C%2F%2Fgithub.com%2Chttps%3A%2F%2Fgithub.com%2Cgithub.com%2C%2F%2Fgithub.com%2Chttps%3A%2F%2Fgithub.com">         <embed src="https://github.global.ssl.fastly.net/flash/ZeroClipboard.v1.3.2.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="100%" height="100%" name="global-zeroclipboard-flash-bridge" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="trustedOrigins=github.com%2C%2F%2Fgithub.com%2Chttps%3A%2F%2Fgithub.com%2Cgithub.com%2C%2F%2Fgithub.com%2Chttps%3A%2F%2Fgithub.com" scale="exactfit">                </object></div>    <div class="facebox" id="facebox" style="display:none;">       <div class="facebox-popup">         <div class="facebox-content">         </div>         <button type="button" class="facebox-close js-facebox-close">           <span class="octicon octicon-remove-close"></span>         </button>       </div>     </div><form id="gclp-frame-form" target="gclp-frame" method="post" style="display: none;"></form><script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }}catch(e){}</script></body></html>

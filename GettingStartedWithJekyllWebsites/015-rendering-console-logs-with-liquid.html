@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>html - Jekyll code in jekyll - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico?v=5bcec08ba0c5">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png?v=fd7230a85918">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta name="og:type" content="website">
+    <meta name="og:image" content="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=fde65a5a78c6">
+    <meta name="og:title" content="Jekyll code in jekyll">
+    <meta name="og:description" content="I&#39;m creating a bird&#39;s eye view tutorial for Jekyll, to be hosted on Github pages (on my blog that runs on Jekyll). So, I want to put some code there. If I put the following:
+
+{% for post in site.po...">
+    <meta name="og:url" content="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll">
+    <link rel="canonical" href="./015-rendering-console-logs-with-liquid_files/015-rendering-console-logs-with-liquid.html">
+
+    
+    
+    <script type="text/javascript" async="" src="./015-rendering-console-logs-with-liquid_files/ados"></script><script async="" src="./015-rendering-console-logs-with-liquid_files/quant.js"></script><script async="" src="./015-rendering-console-logs-with-liquid_files/beacon.js"></script><script async="" src="./015-rendering-console-logs-with-liquid_files/analytics.js"></script><script type="text/javascript" async="" src="./015-rendering-console-logs-with-liquid_files/ados.js"></script><script src="./015-rendering-console-logs-with-liquid_files/jquery.min.js"></script>
+    <script src="./015-rendering-console-logs-with-liquid_files/stub-uc.en.js"></script>
+    <link rel="stylesheet" type="text/css" href="./015-rendering-console-logs-with-liquid_files/all.css">
+    
+    <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;Jekyll code in jekyll&#39;" href="http://stackoverflow.com/feeds/question/22044488">
+    <script>
+        
+        StackExchange.ready(function () {
+            StackExchange.using("postValidation", function () {
+                StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+            });
+
+            
+            StackExchange.question.init({canOpenBounty:true,votesCast:[],totalCommentCount:2,shownCommentCount:2,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:22044488});
+
+            styleCode();
+
+                StackExchange.realtime.subscribeToQuestion('1', '22044488');
+            
+                    });
+    </script>
+
+
+    <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToInboxNotifications();
+                    StackExchange.realtime.subscribeToReputationNotifications('1');
+                StackExchange.realtime.subscribeToTopBarNotifications('1');
+        });
+    </script>
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1396354590,"networkMetaHostname":"meta.stackoverflow.com","styleCode":true,"enableUserHovercards":true,"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","nonAsciiTags":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"c470c1571944c19eae93c2d2e59e6e24","isRegistered":true,"userType":3,"userId":1344732,"accountId":1419880,"gravatar":"<div><img src=\"https://www.gravatar.com/avatar/8cd7449b5d3be188ffb435b5c2ea51fa?s=32&d=identicon&r=PG\" alt=\"\" width=\"32\" height=\"32\"></div>","profileUrl":"http://stackoverflow.com/users/1344732/tara-roys","notificationsUnviewedCount":1,"inboxUnviewedCount":0,"ab":{"welcome_email":{"v":"2","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"f9a8b3e39e7d","js/moderator.en.js":"f8199a7513fe","js/full-anon.en.js":"950ab0b556ab","js/full.en.js":"eab786ff131c","js/wmd.en.js":"a8fdd6e69c91","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"c4a28f4c6429","js/help.en.js":"d40a39a42f42","js/tageditor.en.js":"5a928db63f40","js/tageditornew.en.js":"a98d8a593468","js/inline-tag-editing.en.js":"116639f390aa","js/revisions.en.js":"4a97492dab42","js/review.en.js":"0a6d3660c8e1","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"2931e342cd0f","js/explore-qlist.en.js":"24424eb238e8","js/events.en.js":"79a5f18704d7"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+        
+    </script>
+    
+<link rel="stylesheet" type="text/css" href="./015-rendering-console-logs-with-liquid_files/unicoin.css"><script async="" src="./015-rendering-console-logs-with-liquid_files/full.en.js"></script><script async="" src="./015-rendering-console-logs-with-liquid_files/post-validation.en.js"></script><script async="" src="./015-rendering-console-logs-with-liquid_files/prettify-full.en.js"></script><script async="" src="./015-rendering-console-logs-with-liquid_files/wmd.en.js"></script><script type="text/javascript" src="./015-rendering-console-logs-with-liquid_files/adFeedback.js"></script><link rel="stylesheet" href="http://static.adzerk.net/Extensions/adFeedback.css"><style type="text/css">.fancybox-margin{margin-right:0px;}</style><link href="./015-rendering-console-logs-with-liquid_files/sidebar.min.css" type="text/css" rel="stylesheet"></head>
+<body class="question-page new-topbar" data-gclp-initialized="true" data-gistbox-initialized="true">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="http://stackoverflow.com/">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackoverflow.com/" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+                    <a href="http://blog.stackexchange.com/" data-gps-track="site_switcher.click({ item_type:7 })">blog</a>
+                    <a href="http://stackoverflow.com/users/logout" data-gps-track="site_switcher.click({ item_type:8 })">log out</a>
+    </div>
+
+
+
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="4" data-gps-track="
+            site.switch({ target_site:4, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                </li>
+                            <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    <a class="site-link" href="http://careers.stackoverflow.com/" data-gps-track="site_switcher.click({ item_type:9 })">
+                        <div class="site-icon favicon favicon-careers" title="Stack Overflow Careers"></div>
+                        Careers 2.0
+                    </a>
+                </li>
+        </ul>
+    </div>
+    
+    <div class="header" id="your-communities-header">
+        <h3>
+                <a href="http://stackexchange.com/users/1419880/?tab=accounts">your communities</a>
+        </h3>
+            
+            <a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#" id="edit-pinned-sites">edit</a>
+            <a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#" id="cancel-pinned-sites" style="display: none;">cancel</a>
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <ul class="my-sites">
+                    <li>
+                        
+
+
+
+    <a href="http://stackoverflow.com/" class="site-link js-gps-track" data-id="1" data-gps-track="
+            site.switch({ target_site:1, item_type:3 }),
+        site_switcher.click({ item_type:1 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+            <span class="rep-score">128</span>
+    </a>
+
+                    </li>
+                    <li>
+                        
+
+
+
+    <a href="http://programmers.stackexchange.com/" class="site-link js-gps-track" data-id="131" data-gps-track="
+            site.switch({ target_site:131, item_type:3 }),
+        site_switcher.click({ item_type:1 })">
+        <div class="site-icon favicon favicon-programmers" title="Programmers"></div>
+        Programmers
+            <span class="rep-score">8</span>
+    </a>
+
+                    </li>
+            </ul>
+                <div class="pinned-site-editor-container" style="display: none;">
+                    <input id="js-site-search-txt" type="text" class="site-filter-input" value="" placeholder="Add a Stack Exchange community">
+                    <input type="submit" id="pin-site-btn" value="Add" disabled="disabled">
+                    <ul class="js-found-sites found-sites"></ul>
+                    <ul class="pinned-site-list sortable" data-custom-list="False">
+                    </ul>
+                    <input type="submit" value="Save" id="save-pinned-sites-btn" disabled="disabled">
+                    <a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#" id="reset-pinned-sites">reset to default list</a>
+                </div>
+    </div>
+    
+    <div class="header">
+        <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a></h3>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+            
+            <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 120 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+                <a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages">
+                    <span class="hidden-text">Inbox</span>
+                    <span class="unread-count" style="display:none"></span>
+                </a>
+                <a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#" class="topbar-icon icon-achievements yes-hover js-achievements-button" data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned">
+                    <span class="hidden-text">Reputation and Badges</span>
+                    <span class="unread-count" style="display:none">
+                        
+                    </span>
+                </a>
+        </div>
+
+        <div class="topbar-links">
+            
+                <a href="http://stackoverflow.com/users/1344732/tara-roys" class="profile-me">
+			        <div title="Tara Roys"><img src="./015-rendering-console-logs-with-liquid_files/8cd7449b5d3be188ffb435b5c2ea51fa" alt="" width="24" height="24" class="avatar-me js-avatar-me"></div>
+                    <div class="links-container topbar-flair">
+
+                        <span class="reputation" title="your reputation: 128">
+                            128
+                        </span>
+<span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>                    </div>
+			    </a>
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        
+
+                        
+
+    <a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+                        
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="http://stackoverflow.com/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="" tabindex="1" autocomplete="off" maxlength="240">
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs ">
+                    <ul>
+                            <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                            <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                            <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                            <li><a id="nav-badges" href="http://stackoverflow.com/help/badges">Badges</a></li>
+                            <li><a id="nav-unanswered" href="http://stackoverflow.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content">
+            
+
+<div itemscope="" itemtype="http://schema.org/Article">
+	<link itemprop="image" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+			<div id="question-header">
+			<h1 itemprop="name"><a href="./015-rendering-console-logs-with-liquid_files/015-rendering-console-logs-with-liquid.html" class="question-hyperlink">Jekyll code in jekyll</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="22044488" id="question">
+    
+    <script>
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk670903540",4).setZone(43) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk670903540">
+            <iframe id="ados_frame_adzerk670903540_173589" frameborder="0" scrolling="no" height="90" width="728"></iframe><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li></ul><a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" src="./015-rendering-console-logs-with-liquid_files/i.gif"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="22044488">
+    <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+    <span class="vote-count-post ">1</span>
+    <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+    
+    <a class="star-off" href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#" title="This is a favorite question (click again to undo)">favorite</a>
+    <div class="favoritecount"><b></b></div>   
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="description">
+
+        <p>I'm creating a bird's eye view tutorial for Jekyll, to be hosted on Github pages (on my blog that runs on Jekyll). So, I want to put some code there. If I put the following:</p>
+
+<pre class="lang-rb prettyprint prettyprinted" data-initialized="true" data-gclp-id="0" style=""><code><span class="pun">{%</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> post </span><span class="kwd">in</span><span class="pln"> site</span><span class="pun">.</span><span class="pln">posts </span><span class="pun">%}</span><span class="pln">
+</span><span class="pun">{%</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> post</span><span class="pun">.</span><span class="pln">categories contains </span><span class="str">'&lt;categoryname&gt;'</span><span class="pln"> </span><span class="pun">%}</span><span class="pln">
+    </span><span class="pun">&lt;</span><span class="pln">h2</span><span class="pun">&gt;</span><span class="pln">
+      </span><span class="pun">&lt;</span><span class="pln">a href</span><span class="pun">=</span><span class="str">"{{ post.url }}"</span><span class="pun">&gt;{{</span><span class="pln"> post</span><span class="pun">.</span><span class="pln">title </span><span class="pun">}}&lt;/</span><span class="pln">a</span><span class="pun">&gt;</span><span class="pln">
+    </span><span class="pun">&lt;/</span><span class="pln">h2</span><span class="pun">&gt;</span><span class="pln">
+</span><span class="pun">{%</span><span class="pln"> endif </span><span class="pun">%}</span><span class="pln">
+</span><span class="pun">{%</span><span class="pln"> endfor </span><span class="pun">%}</span></code></pre>
+
+<p>(all lines after tabspaces), it doesn't render as code, rather, it executes. How do I stop it from executing and render it as code?</p>
+
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/html" class="post-tag js-gps-track" title="show questions tagged &#39;html&#39;" rel="tag">html</a> <a href="http://stackoverflow.com/questions/tagged/ruby" class="post-tag js-gps-track" title="show questions tagged &#39;ruby&#39;" rel="tag">ruby</a> <a href="http://stackoverflow.com/questions/tagged/markdown" class="post-tag js-gps-track" title="show questions tagged &#39;markdown&#39;" rel="tag">markdown</a> <a href="http://stackoverflow.com/questions/tagged/jekyll" class="post-tag js-gps-track" title="show questions tagged &#39;jekyll&#39;" rel="tag">jekyll</a> <a href="http://stackoverflow.com/questions/tagged/github-pages" class="post-tag js-gps-track" title="" rel="tag">github-pages</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/22044488/1344732" title="short permalink to this question" class="short-link" id="link-post-22044488">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/22044488/edit" class="suggest-edit-post" title="revise and improve this post">edit</a><span class="lsep">|</span><a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#" class="flag-post-link" title="flag this post for serious problems or moderator attention" data-postid="22044488">flag</a></div>        
+    </td>
+    <td class="post-signature owner">
+        <div class="user-info user-hover">
+    <div class="user-action-time">
+        asked <span title="2014-02-26 14:32:04Z" class="relativetime">Feb 26 at 14:32</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2302611/ranveer"><div class="gravatar-wrapper-32"><img src="./015-rendering-console-logs-with-liquid_files/xExX2.jpg" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2302611/ranveer">Ranveer</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,156</span><span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span><span title="28 bronze badges"><span class="badge3"></span><span class="badgecount">28</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-22044488" class="comments" data-localized="true">
+		    <table>
+			    <tbody data-remaining-comments-count="0" data-addlink-html="add comment" data-addlink-disabled="false">
+
+    <tr id="comment-33422779" class="comment">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>   
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Have a look at the <code>Code snippet highlighting</code> section on <a href="http://jekyllrb.com/docs/templates/" rel="nofollow">jekyllrb.com/docs/templates</a> and <a href="http://stackoverflow.com/questions/6761990/highlight-with-jekyll-and-pygments-doesnt-works" title="highlight with jekyll and pygments doesnt works">stackoverflow.com/questions/6761990/…</a></span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/2470724/nick-r" title="3443 reputation" class="comment-user">Nick R</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#comment33422779_22044488"><span title="2014-02-26 14:39:52Z" class="relativetime-clean">Feb 26 at 14:39</span></a></span>
+                                                                            </div>
+        </td>
+    </tr>
+    <tr id="comment-33423140" class="comment">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>   
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I tried this too. How do I highlight jekyll? Works on html though</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/2302611/ranveer" title="1156 reputation" class="comment-user owner">Ranveer</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#comment33423140_22044488"><span title="2014-02-26 14:48:07Z" class="relativetime-clean">Feb 26 at 14:48</span></a></span>
+                                                                            </div>
+        </td>
+    </tr>
+			    </tbody>
+				    <tfoot>
+					    <tr>
+						    <td></td>
+						    <td class="comment-form">
+							    <form id="add-comment-22044488" class="" data-placeholdertext="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."></form>
+						    </td>
+					    </tr>
+				    </tfoot>
+		    </table>
+	    </div>
+			<a id="comments-link-22044488" class="comments-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments." href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#">add comment</a>
+    </td>
+</tr>                  <tr class="bounty-notification">
+          <td class="votecell"></td>
+          <td>
+          <div style="margin-top:20px">
+            <a class="bounty-link bounty" title="offer some of your reputation for better answers">
+                start a bounty
+            </a>
+          </div>
+          </td>
+          </tr>
+    </tbody></table>    
+</div>
+
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								2 Answers
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll?answertab=active#tab-top" title="Answers with the latest activity first">active</a>
+        <a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll?answertab=oldest#tab-top" title="Answers in the order they were provided">oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll?answertab=votes#tab-top" title="Answers with the highest score first">votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="22045747"></a>
+<div id="answer-22045747" class="answer accepted-answer" data-answerid="22045747">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="22045747">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span class="vote-count-post ">2</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text">
+            <p>The <code>{%...%}</code> syntax used by Jekyll is part of the <a href="http://docs.shopify.com/themes/liquid-basics" rel="nofollow">Liquid templating engine</a>. To escape these tags, and so show them literally, you should use the <a href="http://docs.shopify.com/themes/liquid-basics/logic#raw" rel="nofollow"><code>raw</code> tag</a>.</p>
+
+<p>You will probably want to combine this with the markdown syntax for code blocks. With Redcarpet you can use the triple backtick syntax. It doesn’t matter if you put the backticks inside the <code>raw</code> tags or the other way round:</p>
+
+<pre class="lang-none prettyprint prettyprinted" data-initialized="true" data-gclp-id="1" style=""><code><span class="pln">{%raw%}
+```
+{% for post in site.posts %}
+{% if post.categories contains '&lt;categoryname&gt;' %}
+    &lt;h2&gt;
+      &lt;a href="{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;
+    &lt;/h2&gt;
+{% endif %}
+{% endfor %}
+```
+{%endraw%}</span></code></pre>
+
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/22045747/1344732" title="short permalink to this answer" class="short-link" id="link-post-22045747">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/22045747/edit" class="suggest-edit-post" title="revise and improve this post">edit</a><span class="lsep">|</span><a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#" class="flag-post-link" title="flag this post for serious problems or moderator attention" data-postid="22045747">flag</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-02-26 15:22:08Z" class="relativetime">Feb 26 at 15:22</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/214790/matt"><div><img src="./015-rendering-console-logs-with-liquid_files/f878c8230342730990acd21f889301d4" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/214790/matt">matt</a><br>
+        <span class="reputation-score" title="reputation score 28656" dir="ltr">28.7k</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="53 silver badges"><span class="badge2"></span><span class="badgecount">53</span></span><span title="73 bronze badges"><span class="badge3"></span><span class="badgecount">73</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-22045747" class="comments" data-localized="true">
+		    <table>
+			    <tbody data-remaining-comments-count="0" data-addlink-html="add comment" data-addlink-disabled="false">
+
+    <tr id="comment-33424967" class="comment">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>   
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Wonderful! This works.</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/2302611/ranveer" title="1156 reputation" class="comment-user owner">Ranveer</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#comment33424967_22045747"><span title="2014-02-26 15:26:45Z" class="relativetime-clean">Feb 26 at 15:26</span></a></span>
+                                                                            </div>
+        </td>
+    </tr>
+			    </tbody>
+				    <tfoot>
+					    <tr>
+						    <td></td>
+						    <td class="comment-form">
+							    <form id="add-comment-22045747" class="" data-placeholdertext="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></form>
+						    </td>
+					    </tr>
+				    </tfoot>
+		    </table>
+	    </div>
+			<a id="comments-link-22045747" class="comments-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”." href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#">add comment</a>
+    </td>
+</tr>
+    </tbody></table>
+</div>
+<script>
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk294649890",4).setZone(44) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk294649890">
+            <iframe id="ados_frame_adzerk294649890_180216" frameborder="0" scrolling="no" height="90" width="728"></iframe><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li></ul><a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" src="./015-rendering-console-logs-with-liquid_files/i(1).gif"></div>
+  
+<a name="22044701"></a>
+<div id="answer-22044701" class="answer" data-answerid="22044701">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="22044701">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span class="vote-count-post ">2</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text">
+            <p>Enclose your code in backticks:</p>
+
+<p>(tested with redcarpet markdown engine)</p>
+
+<pre class="lang-rb prettyprint prettyprinted" data-initialized="true" data-gclp-id="2" style=""><code><span class="str">```
+{% for post in site.posts %}
+{% if post.categories contains '&lt;categoryname&gt;' %}
+    &lt;h2&gt;
+      &lt;a href="{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;
+    &lt;/h2&gt;
+{% endif %}
+{% endfor %}
+```</span></code></pre>
+
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/22044701/1344732" title="short permalink to this answer" class="short-link" id="link-post-22044701">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/22044701/edit" class="suggest-edit-post" title="revise and improve this post">edit</a><span class="lsep">|</span><a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#" class="flag-post-link" title="flag this post for serious problems or moderator attention" data-postid="22044701">flag</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-02-26 14:41:38Z" class="relativetime">Feb 26 at 14:41</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1938262/zeis"><div><img src="./015-rendering-console-logs-with-liquid_files/413e4053da7db00fac05e843c5e87c12" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1938262/zeis">zeis</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">46</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-22044701" class="comments" data-localized="true">
+		    <table>
+			    <tbody data-remaining-comments-count="3" data-addlink-html="add comment" data-addlink-disabled="false">
+
+    <tr id="comment-33423087" class="comment">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>   
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">This didn't work :(</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/2302611/ranveer" title="1156 reputation" class="comment-user owner">Ranveer</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#comment33423087_22044701"><span title="2014-02-26 14:46:53Z" class="relativetime-clean">Feb 26 at 14:46</span></a></span>
+                                                                            </div>
+        </td>
+    </tr>
+    <tr id="comment-33423194" class="comment">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>   
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">What markdown engine are you using?</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/1938262/zeis" title="46 reputation" class="comment-user">zeis</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#comment33423194_22044701"><span title="2014-02-26 14:49:02Z" class="relativetime-clean">Feb 26 at 14:49</span></a></span>
+                                                                            </div>
+        </td>
+    </tr>
+    <tr id="comment-33423907" class="comment">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>   
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">The markdown engine is specified in your _config.yml. I have this line in mine: markdown: redcarpet</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/1938262/zeis" title="46 reputation" class="comment-user">zeis</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#comment33423907_22044701"><span title="2014-02-26 15:03:58Z" class="relativetime-clean">Feb 26 at 15:03</span></a></span>
+                                                                            </div>
+        </td>
+    </tr>
+    <tr id="comment-33424173" class="comment">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>   
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Ah! I'm using <code>rdiscount</code>. So is it a problem with the engine @zeis?</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/2302611/ranveer" title="1156 reputation" class="comment-user owner">Ranveer</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#comment33424173_22044701"><span title="2014-02-26 15:09:44Z" class="relativetime-clean">Feb 26 at 15:09</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+        </td>
+    </tr>
+    <tr id="comment-33424445" class="comment">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                <a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>   
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Different engines may use different markers for code blocks.</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/1938262/zeis" title="46 reputation" class="comment-user">zeis</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#comment33424445_22044701"><span title="2014-02-26 15:15:39Z" class="relativetime-clean">Feb 26 at 15:15</span></a></span>
+                                                                            </div>
+        </td>
+    </tr>
+			    </tbody>
+				    <tfoot>
+					    <tr>
+						    <td></td>
+						    <td class="comment-form">
+							    <form id="add-comment-22044701" class="" data-placeholdertext="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></form>
+						    </td>
+					    </tr>
+				    </tfoot>
+		    </table>
+	    </div>
+			<a id="comments-link-22044701" class="comments-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”." href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#">add / show <b>3</b> more comments</a>
+    </td>
+</tr>
+    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="http://stackoverflow.com/questions/22044488/answer/submit" method="post" class="post-form">
+							<input type="hidden" id="post-id" value="22044488">
+							<h2 class="space">Your Answer</h2>
+
+
+
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+         
+        prepareEditor({
+            heartbeatType: 'answer',
+            bindNavPrevention: true,
+            postfix: "",
+            onDemand: false,
+            discardSelector: ".discard-answer"
+            
+        });
+        
+
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li class="wmd-button" id="wmd-bold-button" title="Strong &lt;strong&gt; Ctrl+B" style="left: 0px;"><span style="background-position: 0px 0px;"></span></li><li class="wmd-button" id="wmd-italic-button" title="Emphasis &lt;em&gt; Ctrl+I" style="left: 25px;"><span style="background-position: -20px 0px;"></span></li><li class="wmd-spacer wmd-spacer1" id="wmd-spacer1"></li><li class="wmd-button" id="wmd-link-button" title="Hyperlink &lt;a&gt; Ctrl+L" style="left: 75px;"><span style="background-position: -40px 0px;"></span></li><li class="wmd-button" id="wmd-quote-button" title="Blockquote &lt;blockquote&gt; Ctrl+Q" style="left: 100px;"><span style="background-position: -60px 0px;"></span></li><li class="wmd-button" id="wmd-code-button" title="Code Sample &lt;pre&gt;&lt;code&gt; Ctrl+K" style="left: 125px;"><span style="background-position: -80px 0px;"></span></li><li class="wmd-button" id="wmd-image-button" title="Image &lt;img&gt; Ctrl+G" style="left: 150px;"><span style="background-position: -100px 0px;"></span></li><li class="wmd-spacer wmd-spacer2" id="wmd-spacer2"></li><li class="wmd-button" id="wmd-olist-button" title="Numbered List &lt;ol&gt; Ctrl+O" style="left: 200px;"><span style="background-position: -120px 0px;"></span></li><li class="wmd-button" id="wmd-ulist-button" title="Bulleted List &lt;ul&gt; Ctrl+U" style="left: 225px;"><span style="background-position: -140px 0px;"></span></li><li class="wmd-button" id="wmd-heading-button" title="Heading &lt;h1&gt;/&lt;h2&gt; Ctrl+H" style="left: 250px;"><span style="background-position: -160px 0px;"></span></li><li class="wmd-button" id="wmd-hr-button" title="Horizontal Rule &lt;hr&gt; Ctrl+R" style="left: 275px;"><span style="background-position: -180px 0px;"></span></li><li class="wmd-spacer wmd-spacer3" id="wmd-spacer3"></li><li class="wmd-button" id="wmd-undo-button" title="Undo - Ctrl+Z" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li class="wmd-button" id="wmd-redo-button" title="Redo - Ctrl+Shift+Z" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li><li class="wmd-button wmd-help-button" id="wmd-help-button" title="Markdown Editing Help" style="right: 0px;"><span style="background-position: -240px 0px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input processed" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        <div class="grippie" style="margin-right: 0px;"></div></div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+    <div class="community-option">
+        <input id="communitymode" name="communitymode" type="checkbox">
+        <label for="communitymode" title="Marking an answer community wiki encourages others to edit it by lowering the reputation barrier required to edit. However, you will not gain any upvote reputation from it. This cannot be undone.">community wiki</label>
+    </div>
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="c470c1571944c19eae93c2d2e59e6e24">
+        <input id="author" name="author" type="text">
+    </div>
+</div>
+							<div style="position: relative;">
+								
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+									<a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#" class="discard-answer dno">discard</a>
+								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/html" class="post-tag" title="show questions tagged &#39;html&#39;" rel="tag">html</a> <a href="http://stackoverflow.com/questions/tagged/ruby" class="post-tag" title="show questions tagged &#39;ruby&#39;" rel="tag">ruby</a> <a href="http://stackoverflow.com/questions/tagged/markdown" class="post-tag" title="show questions tagged &#39;markdown&#39;" rel="tag">markdown</a> <a href="http://stackoverflow.com/questions/tagged/jekyll" class="post-tag" title="show questions tagged &#39;jekyll&#39;" rel="tag">jekyll</a> <a href="http://stackoverflow.com/questions/tagged/github-pages" class="post-tag" title="show questions tagged &#39;github-pages&#39;" rel="tag">github-pages</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes"><div class="module" id="uc-sidebar-module"><span>You have <span class="uc-balance" title="your current balance is 75 Unicoins">75</span>&nbsp;Unicoins<span style="width:0;display:inline-block;">.</span></span></div>
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2014-02-26 14:32:04Z"><b>1 month ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>65 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll?lastactivity" class="lastactivity-link" title="2014-02-26 15:22:08Z">1 month ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<script>
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk2033377557",17).setZone(45) ; });                    
+            </script>
+              
+    <div id="hireme"> <a href="http://careers.stackoverflow.com/jobs?a=288" class="top" target="_blank"></a> <ul class="jobs"> <li> <a href="http://careers.stackoverflow.com/jobs/51387/plangrid-is-looking-for-senior-ios-engineers-plangrid?a=10FHqQAmY" target="_blank" title="PlanGrid is looking for senior iOS engineers at PlanGrid. Click to learn more."> PlanGrid is looking for senior iOS engineers<br> <span class="company">PlanGrid</span> <span class="location">San Francisco, CA / relocation</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/49955/senior-game-engineer-incontext-solutions?a=YVq0KDAs" target="_blank" title="Senior Game Engineer at InContext Solutions. Click to learn more."> Senior Game Engineer<br> <span class="company">InContext Solutions</span> <span class="location">Chicago, IL</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/24311/asp-net-mvc-c-sharp-software-developer-top-100-paylocity?a=tEiLVkWY" target="_blank" title="ASP.NET MVC C# Software Developer &#39;Top 100 Digital Companies in Chicago&#39; at Paylocity. Click to learn more."> ASP.NET MVC C# Software Developer 'Top 100 Digital…<br> <span class="company">Paylocity</span> <span class="location">Dallas, TX; Chicago, IL;…</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/51486/product-analyst-salesforce-grosvenor-capital-management?a=10N9dUdUc" target="_blank" title="Product Analyst-Salesforce at Grosvenor Capital Management, L.P. Click to learn more."> Product Analyst-Salesforce<br> <span class="company">Grosvenor Capital Management,…</span> <span class="location">Chicago, IL</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/52061/qa-web-services-tester-forte-group-redbox?a=11uCUq8Ni" target="_blank" title="QA Web Services Tester at Forte Group/Redbox. Click to learn more."> QA Web Services Tester<br> <span class="company">Forte Group/Redbox</span> <span class="location">Chicago, IL</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/50198/quality-assurance-manager-morningstar-inc?a=ZdKT4zh6" target="_blank" title="Quality Assurance Manager at Morningstar. Click to learn more."> Quality Assurance Manager<br> <span class="company">Morningstar</span> <span class="location">Chicago, IL / relocation</span> </a> </li> <li class="city"><a href="http://careers.stackoverflow.com/jobs/location/chicago%2c%20il%2c%20united%20states?a=x200">More jobs near Chicago...</a></li> </ul> <img alt="" class="impression" src="./015-rendering-console-logs-with-liquid_files/tEiLVkWY-10N9dUdUc-11uCUq8Ni-10FHqQAmY-YVq0KDAs-ZdKT4zh6-288-x200" style="display:none"></div>
+			  
+    
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/6761990?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">15</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/6761990/highlight-with-jekyll-and-pygments-doesnt-works?lq=1" class="question-hyperlink">Highlight with Jekyll and pygments doesn't works</a>
+</div>			</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/5301273?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/5301273/jekyll-server-produces-error?rq=1" class="question-hyperlink">jekyll --server produces error</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/10585916?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">5
+    </div>
+</a><a href="http://stackoverflow.com/questions/10585916/configuring-jekyll-for-github-project-pages?rq=1" class="question-hyperlink">Configuring Jekyll for github PROJECT pages</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/11623349?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/11623349/how-to-syntax-highlight-jekyll-markup-in-jekyll-page?rq=1" class="question-hyperlink">How To Syntax Highlight Jekyll Markup in Jekyll Page</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/13646945?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">8
+    </div>
+</a><a href="http://stackoverflow.com/questions/13646945/indenting-generated-markup-in-jekyll-ruby?rq=1" class="question-hyperlink">Indenting generated markup in Jekyll/Ruby</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/17087766?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/17087766/make-a-list-of-posts-with-a-tag-in-markdown-and-jekyll?rq=1" class="question-hyperlink">Make a list of posts with a tag in Markdown and Jekyll</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/17359697?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/17359697/github-jekyll-cannot-find-posts?rq=1" class="question-hyperlink">GitHub Jekyll cannot find posts</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/17754312?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">2
+    </div>
+</a><a href="http://stackoverflow.com/questions/17754312/how-to-suppress-blank-line-in-jekyll?rq=1" class="question-hyperlink">How to suppress blank line in Jekyll?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/18401297?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">3
+    </div>
+</a><a href="http://stackoverflow.com/questions/18401297/jekyll-not-generating-pages-in-subfolders?rq=1" class="question-hyperlink">Jekyll not generating pages in subfolders</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/18800790?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/18800790/error-of-jekyll-compile-the-html-codes-for-github-page?rq=1" class="question-hyperlink">error of Jekyll compile the html codes for github page</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/21807939?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/21807939/how-can-i-eliminate-the-empty-line-in-code-blocks-rendered-by-jekyll?rq=1" class="question-hyperlink">How can I eliminate the empty line in code blocks rendered by jekyll?</a>
+</div>
+
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/22773463/javascript-assignment-with-comma" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    JavaScript assignment with comma
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/25634/how-much-time-should-i-account-to-spend-on-the-keukenhof" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How much time should I account to spend on the Keukenhof?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/22780751/sql-query-where-in-act-as-and-not-or" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    SQL query where 'IN' act as 'AND' not 'OR'?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/733922/constructing-a-mobius-strip-using-a-square-paper-is-it-possible" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Constructing a Möbius strip using a square paper? Is it possible?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-askubuntu" title="Ask Ubuntu"></div><a href="http://askubuntu.com/questions/441458/can-a-windows-virus-transfer-to-ubuntu" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:89 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can a Windows virus transfer to Ubuntu?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/733754/visually-stunning-math-concepts-which-are-easy-to-explain" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Visually stunning math concepts which are easy to explain
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-matheducators" title="Mathematics Educators Stack Exchange"></div><a href="http://matheducators.stackexchange.com/questions/1137/how-much-time-should-we-spend-on-material-that-should-be-already-known-by-studen" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:548 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How much time should we spend on material that should be already known by students?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/21732/is-it-ok-to-ask-a-company-how-they-got-my-email-address" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:423 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it OK to ask a company how they got my email address?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-photo" title="Photography Stack Exchange"></div><a href="http://photo.stackexchange.com/questions/49144/center-column-height-on-tripods" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:61 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Center column height on tripods
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/28859/how-to-balance-dignity-with-a-calculated-risk-of-offensiveness-tastelessness" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:174 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to balance dignity with a calculated risk of offensiveness / tastelessness?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-webmasters" title="Webmasters Stack Exchange"></div><a href="http://webmasters.stackexchange.com/questions/60106/optimizing-and-securing-robots-txt" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:45 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Optimizing and securing robots.txt
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="http://mathematica.stackexchange.com/questions/45142/pure-function-interfering-with-evaluation" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Pure function interfering with evaluation
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/21809/how-can-we-convince-the-programming-department-to-quiet-down" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:423 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can we convince the programming department to quiet down
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-matheducators" title="Mathematics Educators Stack Exchange"></div><a href="http://matheducators.stackexchange.com/questions/1149/is-there-a-good-way-to-explain-determinants-in-an-elementary-linear-algebra-clas" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:548 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a good way to explain determinants in an elementary linear algebra class?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-askubuntu" title="Ask Ubuntu"></div><a href="http://askubuntu.com/questions/441883/bash-executing-commands-in-current-shell" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:89 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Bash - executing commands in current shell
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/2907/why-is-there-no-alarm-when-the-transponder-is-turned-off" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is there no alarm when the transponder is turned off?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-networkengineering" title="Network Engineering Stack Exchange"></div><a href="http://networkengineering.stackexchange.com/questions/7135/traceroute-many-hops-with-the-same-ip" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:496 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    traceroute many hops with the same ip
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/734664/how-does-hilberts-nullstellensatz-generalize-the-fundamental-theorem-of-algebr" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How does Hilbert's Nullstellensatz generalize the "fundamental theorem of algebra"?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/585781/why-does-sshdopenssh-create-two-processes-per-connection" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why does sshd(openssh) create two processes per connection?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/234253/why-is-cpu-cache-memory-so-fast" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:131 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is CPU cache memory so fast?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/20315/im-a-large-seinfeld" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    "I'm a large." (Seinfeld)
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/734456/infinity-hotel-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Infinity Hotel problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/160966/is-it-ok-to-use-before-at-the-end-of-a-sentence" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it ok to use 'before' at the end of a sentence?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/160846/is-there-an-opposite-of-tightfisted-that-also-contains-reference-to-a-hand" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there an opposite of tightfisted that also contains reference to a hand?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#" class="show-more js-show-more js-gps-track" data-gps-track="posts_hot_network.click({ item_type:3, location:11 })">
+            more hot questions
+        </a>
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/22044488" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/22044488/ivc/e0c0');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/22044488/ivc/e0c0" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">lang-rb</div></div>
+
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <div class="top-footer-links"><a id="uc-footer-link" href="http://stackoverflow.com/questions/22044488/jekyll-code-in-jekyll#">unicoins</a>
+                        <a href="http://stackoverflow.com/about">about</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://blog.stackexchange.com/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackexchange.com/about/hiring">jobs</a>
+                    <a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MjAsImNtIjo5NTQsImNoIjoxMTc4LCJjciI6Mjc3NiwiZG0iOjQsImZjIjoyODYyLCJmbCI6Mjc1MSwibnciOjIyLCJydiI6MCwicHIiOjExNSwic3QiOjAsInVyIjoiaHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL2Fib3V0L2NvbnRhY3QiLCJyZSI6MX0&s=hRods5B22XvRBwWIwtIMekcyNF8">advertising info</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="professional system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems.">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="Information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (14)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (12)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackoverflow.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Overflow</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+
+            <div id="copyright">
+                site design / logo © 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2014.4.1.1509
+            </div>
+            
+        </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    ados.run.push(function () { ados_setKeywords('html,ruby,markdown,jekyll,github-pages,x-user-registered');; ados_load(); });         
+</script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-1');        
+        ga('set', 'dimension1', '1419880');         
+        ga('set', 'dimension2', '|html|ruby|markdown|jekyll|github-pages|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>        
+        <script>if (StackExchange.uc.init(75,[],{"4e0b":"1eb15e2dca79","91cd":"0149a6feeb7c","bd96":"cb1a9880e759"})) {
+                $("<link rel='stylesheet' type='text/css' href='//cdn.sstatic.net/unicoin/unicoin.css?v=7a8c6a85d7a8'/>").appendTo("head");
+        }</script>
+    
+    
+    
+<form id="gclp-frame-form" target="gclp-frame" method="post" style="display: none;"></form><div class="gclp-code-grabber" data-gclp-id="0" data-hasqtip="true" style="left: 847.5px; top: 271.6875px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="1" data-hasqtip="true" style="left: 847.5px; top: 899.375px; display: none;"></div><div class="gclp-code-grabber" data-gclp-id="2" data-hasqtip="true" style="left: 847.5px; top: 1355.375px; display: none;"></div><script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }}catch(e){}</script></body></html>
