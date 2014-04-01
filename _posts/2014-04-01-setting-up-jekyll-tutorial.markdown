@@ -40,9 +40,19 @@ If I do steps 2 through 4, my process makes automatic backups, saves everything,
     
     git push 
 
-This command does two things for me. It saves a backup copy of my directions to a place called Github. Github as a service called Github Pages that lets me publish simple blog pages. If I use my special template to make a log and put it in the right folder, github will make a nice-looking webpage for me. Five seconds after I say 'git push,'' I have a new post on my project's website. 
+This command does two things for me. It saves a backup copy of my directions to a place with the name of Github. Github has a service called Github Pages that lets me publish simple blog pages. If I use my special template to make a log and put it in the right folder, github will make a nice-looking webpage for me. Five seconds after I say 'git push,'' I have a new post on my project's website. 
 
 ##How I set up a simple documentation process with Git and Jekyll
+
+This is how I take easy notes: I go to a webpage. When I see a part of the webpage that has valuable information, I use the web inspector in Google Chrome to change the background of that part to orange.  Then I save that webpage to my computer with a number and a name. 
+
+The website below is my copy of the jekyll main page.  It is numbered 001-follow-main-page-instructions.html because it is the first website I saw when I googled Jekyll. I name follow-main-page-instructions because that is what I did on this page.  
+
+[Tara's higlighted copy of the Jekyll Website](/GettingStartedWithJekyllWebsites/001-follow-main-page-instructions.html/) 
+
+[Actual Jekyll main page](http://jekyllrb.com/)
+
+I do what the page says to install jekyll. The install process takes about half an hour. 
 
 {%raw%}
 ```bash
