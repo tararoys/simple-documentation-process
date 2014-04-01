@@ -16,8 +16,11 @@ body {
   background-color: #FFF;
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
-  text-align: center;
+/*  text-align: center;*/
 }
+  @media (max-width: 480px){.content ul {padding-left: 20px;}}
+  @media (max-width: 568px){.content {margin: 0;}}
+  @media (min-width: 768px){.content {padding: 40px 40px 30px;font-size: 21px;}}
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
