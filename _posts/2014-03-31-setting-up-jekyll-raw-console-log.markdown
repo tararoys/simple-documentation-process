@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Setting Up Jekyll Raw Console Log"
-date:   2014-04-01 18:32:40
+date:   2014-04-01 05:32:40
 categories: jekyll update
 ---
 
