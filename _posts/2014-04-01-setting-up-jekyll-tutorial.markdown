@@ -312,10 +312,16 @@ At this point I realized that I did not have the project under version control. 
     To https://github.com/tararoys/simple-documentation-process.git
      * [new branch]      master -> master
     Branch master set up to track remote branch master from origin.
-    bash-3.2$ echo 'remember to delete that password from the log , you fool.'
-    remember to delete that password from the log , you fool.
-    bash-3.2$ echo 'to answer the previous question, no, magic does not just happen if you push to github.  You need to create a branch called github pages and push to that.'
-    to answer the previous question, no, magic does not just happen if you push to github.  You need to create a branch called github pages and push to that.
+```
+{%endraw%}
+
+
+remember to delete that password from the log , you fool.
+to answer the previous question, no, magic does not just happen if you push to github.  You need to create a branch called github pages and push to that.
+
+{%raw%}
+
+```bash
     bash-3.2$ git checkout -b gh-pages
     Switched to a new branch 'gh-pages'
     bash-3.2$ git push origin gh-pages
