@@ -140,6 +140,10 @@ I click on the post.  I see a link to a post called [Welcome to Jekyll!](/Gettin
 
  {%endraw%} 
 
+ ## Adding a new post to Jekyll and creating a Github Repository
+
+ In this section, I fail to do and test just one thing at a time. I create a new post and at the same time put this blog under version control. 
+
  I have read the example post.  I am now going to take my how to set up easy documentation post and copy it into a jekyll blog. 
  {%raw%} 
 
@@ -152,7 +156,9 @@ I click on the post.  I see a link to a post called [Welcome to Jekyll!](/Gettin
 ```
 
  {%endraw%} 
- I put a new post in the posts directory. Do I have to kill the server and restart it? 
+ 
+Using Sublime, I copy my 'how to set up easy documentation' post from my failed attempt to set up a node.js wheat blog into this new jekyll blog. Since I put a new post in the posts directory. Do I have to kill the server and restart it? 
+ 
  {%raw%} 
 
 ```bash
