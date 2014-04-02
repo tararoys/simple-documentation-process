@@ -228,6 +228,13 @@ I wonder if simply typing jekyll build will update the site?
           Generating... done.
     bash-3.2$ git add -p
     fatal: Not a git repository (or any of the parent directories): .git
+```
+{%endraw%}
+
+At this point I realized that I did not have the project under version control. So I started a git repository. 
+
+{%raw%} 
+```bash 
     bash-3.2$ ls
     _config.yml _posts    css
     _layouts  _site   index.html
@@ -279,6 +286,8 @@ I wonder if simply typing jekyll build will update the site?
 
  {%endraw%} 
  I want to put this on github.  If I simply push it to github, do magic good things happen?  Specifically, does it create a github pages website for me automatically? 
+
+ 
  {%raw%} 
 
 ```bash
