@@ -105,9 +105,10 @@ I do what the page says to install jekyll. The install process takes about half 
     Successfully installed jekyll-1.5.1
     18 gems installed
 ```
-
  {%endraw%} 
- Jekyll install took what seemed like half an hour.  This made me lose my momentum. 
+ 
+ Jekyll install took what seemed like half an hour.  This made me lose my momentum. I continue following the instructions. 
+
  {%raw%} 
 
 ```bash
@@ -134,8 +135,10 @@ I do what the page says to install jekyll. The install process takes about half 
       Server running... press ctrl-c to stop.
 
 ```
+I start the server, go to google, and type in http://0.0.0.0:4000. I see [a jekyll blog that looks like this](/GettingStartedWithJekyllWebsites/002my-new-jekyll-site.html)
 
  {%endraw%} 
+
  I have read the example post.  I am now going to take my how to set up easy documentation post and copy it into a jekyll blog. 
  {%raw%} 
 
