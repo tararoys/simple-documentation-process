@@ -135,10 +135,10 @@ I do what the page says to install jekyll. The install process takes about half 
       Server running... press ctrl-c to stop.
 
 ```
-I start the server, go to google, and type in http://0.0.0.0:4000. I see [a jekyll blog that looks like this](/GettingStartedWithJekyllWebsites/002my-new-jekyll-site.html)
-I click on the post.  I see a link to a post called [Welcome to Jekyll!](/GettingStartedWithJekyllWebsites/003post-on-jekyll.html). If you click on it, you see an example post.  
-
  {%endraw%} 
+
+ I start the server, go to google, and type in http://0.0.0.0:4000. I see [a jekyll blog that looks like this]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/002my-new-jekyll-site.html)
+I click on the post.  I see a link to a post called [Welcome to Jekyll!]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/003post-on-jekyll.html). If you click on it, you see an example post.  
 
  ## Adding a new post to Jekyll and creating a Github Repository
 
@@ -290,8 +290,8 @@ At this point I realized that I did not have the project under version control. 
 
  Creating a new github repository: 
 
-1. [create a new github repository](/GettingStartedWithJekyllWebsites/004-create-new-github-repository.html)
-2. [push local repo to remote repository](/GettingStartedWithJekyllWebsites/005-push-jekyll-to-github.html)
+1. [create a new github repository]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/004-create-new-github-repository.html)
+2. [push local repo to remote repository]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/005-push-jekyll-to-github.html)
 
  {%raw%} 
 
@@ -320,8 +320,8 @@ remember to delete that password from the log , you fool.
 to answer the previous question, no, magic does not just happen if you push to github.  You need to create a branch called github pages and push to that.
 Things I checked to find this out
 
-- [check settings to see if a github pages page exists](/GettingStartedWithJekyllWebsites/006-click-on-settings.html)
-- [see where page is published](/GettingStartedWithJekyllWebsites/007-see-where-your-page-is-published.html)
+- [check settings to see if a github pages page exists]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/006-click-on-settings.html)
+- [see where page is published]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/007-see-where-your-page-is-published.html)
 
 So after checking, I created a github pages branch. 
 {%raw%}
@@ -336,14 +336,14 @@ So after checking, I created a github pages branch.
     To https://github.com/tararoys/simple-documentation-process.git
      * [new branch]      gh-pages -> gh-pages
 ```
-- [debugging github pages branch](/GettingStartedWithJekyllWebsites/008-debugging-gh-pages-branch.html)
-- [Looked for info on how to deploy](/GettingStartedWithJekyllWebsites/009-deploying-with-github-pages.html)
+{%endraw%} 
 
- {%endraw%} 
+- [debugging github pages branch]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/008-debugging-gh-pages-branch.html)
+- [Looked for info on how to deploy]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/009-deploying-with-github-pages.html)
  and delete that password from the log file too, you fool. 
  My website is now published at http://tararoys.github.io/simple-documentation-process/ 
 
- [This is a funny loop I got into.  When I asked jekyll how to set up on github, it sent me to the github pages home page.  When I asked github main pages how to get set up on jekyll, it sent me to the jekyll home page. ](/GettingStartedWithJekyllWebsites/010-blogging-with-jekyll.html)
+ [This is a funny loop I got into.  When I asked jekyll how to set up on github, it sent me to the github pages home page.  When I asked github main pages how to get set up on jekyll, it sent me to the jekyll home page. ]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/010-blogging-with-jekyll.html)
  {%raw%} 
 
 ```bash
@@ -398,21 +398,22 @@ So after checking, I created a github pages branch.
 
     ^Cerror: can't be called from trap context. Use --trace to view backtrace
 ```
+{%endraw%} 
 
 At this point, I have a blog deployed, but it is buggy. There is no css, and in particular, the main page shows up, but the when you click on the links, you get shown 404 pages. 
 
-- [main  of blog working page working](/GettingStartedWithJekyllWebsites/011-buggy-jekyll-demo/001-main-page-working.html)
-- [404 pages for blog posts ](/GettingStartedWithJekyllWebsites/011-buggy-jekyll-demo/002-welcome-to-jekyll-post-404-error.html)
+- [main  of blog working page working]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/011-buggy-jekyll-demo/001-main-page-working.html)
+- [404 pages for blog posts ]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/011-buggy-jekyll-demo/002-welcome-to-jekyll-post-404-error.html)
 
 ##Lots of fruitless debugging on my own 
 
 This section and the folder 
 
-[012-random-googling-time](/GettingStartedWithJekyllWebsites/012-random-googling-time) are full of the websites that I googled.) 
+[012-random-googling-time]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/012-random-googling-time) are full of the websites that I googled.) 
 
 In this case, googling was a waste of time.  Help came when I asked for help by putting an issue in the issue tracker and waiting not-so-patiently for a reply. For an example of why you should stop coding, go to sleep, and wait for a reply in the morning, see the next section. 
 
- {%endraw%} 
+
  I do not know what -w does. 
  {%raw%} 
 
@@ -566,24 +567,25 @@ I found the java control panel and added an exception for the irc chat.
     Password for 'https://tararoys@github.com': 
     Everything up-to-date
 ```
+{%endraw%} 
 
 #Help comes from the issue tracker 
 
- {%endraw%} 
- You will need to setup your baseurl so that it knows everything lives in the "simple-documentation-process 
+[After I put my issue in the issue tracker, I get a response that helps me solve the problem]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/013-help-from-the-issue-tracker/02-the-issue-tracker-comment.html)
+
+The comment is as follows:
+
+
  {%raw%} 
 
 ```bash 
-url. You can do this by adding baseurl: /simple-documentation-process to your 'config.yml' file. And then in your templates you will need to include {{ site.baseurl }} before the links to your posts.
-    > 
-    > This article should also help explain more about how to setup the baseurl."
     You will need to setup your baseurl so that it knows everything lives in the simple-documentation-process url. You can do this by adding baseurl: /simple-documentation-process to your 'config.yml' file. And then in your templates you will need to include {{ site.baseurl }} before the links to your posts.
 
     This article should also help explain more about how to setup the baseurl.
     bash-3.2$ subl .
 ```
+{%endraw%} 
 
- {%endraw%} 
  let us try this out. On the jekyll website is a Project Pages URl Structure section. http://jekyllrb.com/docs/github-pages/  It is similar to the comment on the issue that I posted. https://github.com/jekyll/jekyll/issues/2182  Let us see if we can kludge these two things together to get a working produect. 
  {%raw%} 
 
