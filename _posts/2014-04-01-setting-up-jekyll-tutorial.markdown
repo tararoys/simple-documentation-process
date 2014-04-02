@@ -404,6 +404,14 @@ At this point, I have a blog deployed, but it is buggy. There is no css, and in 
 - [main  of blog working page working](/GettingStartedWithJekyllWebsites/011-buggy-jekyll-demo/001-main-page-working.html)
 - [404 pages for blog posts ](/GettingStartedWithJekyllWebsites/011-buggy-jekyll-demo/002-welcome-to-jekyll-post-404-error.html)
 
+##Lots of fruitless debugging on my own 
+
+This section and the folder 
+
+[012-random-googling-time](/GettingStartedWithJekyllWebsites/012-random-googling-time) are full of the websites that I googled.) 
+
+In this case, googling was a waste of time.  Help came when I asked for help by putting an issue in the issue tracker and waiting not-so-patiently for a reply. For an example of why you should stop coding, go to sleep, and wait for a reply in the morning, see the next section. 
+
  {%endraw%} 
  I do not know what -w does. 
  {%raw%} 
@@ -558,6 +566,8 @@ I found the java control panel and added an exception for the irc chat.
     Password for 'https://tararoys@github.com': 
     Everything up-to-date
 ```
+
+#Help comes from the issue tracker 
 
  {%endraw%} 
  You will need to setup your baseurl so that it knows everything lives in the "simple-documentation-process 
