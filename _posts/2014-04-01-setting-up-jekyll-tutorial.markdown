@@ -586,7 +586,14 @@ The comment is as follows:
 ```
 {%endraw%} 
 
+
+[On a related note, here is the key bit of jekyll documentation. ]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/013-help-from-the-issue-tracker/
+    01-the-key-bit-of-jekyll-documentation.html)
+
  let us try this out. On the jekyll website is a Project Pages URl Structure section. http://jekyllrb.com/docs/github-pages/  It is similar to the comment on the issue that I posted. https://github.com/jekyll/jekyll/issues/2182  Let us see if we can kludge these two things together to get a working produect. 
+
+ [Also, the article mentioned in the comment is an incredibly good resource.]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/03-wish-I-had-seen-this-before.html)
+ 
  {%raw%} 
 
 ```bash
