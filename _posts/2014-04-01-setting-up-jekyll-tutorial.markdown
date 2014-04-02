@@ -287,7 +287,12 @@ At this point I realized that I did not have the project under version control. 
  {%endraw%} 
  I want to put this on github.  If I simply push it to github, do magic good things happen?  Specifically, does it create a github pages website for me automatically? 
 
- 
+
+ Creating a new github repository: 
+
+1. [create a new github repository](/GettingStartedWithJekyllWebsites/004-create-new-github-repository.html)
+2. [push local repo to remote repository](/GettingStartedWithJekyllWebsites/005-push-jekyll-to-github.html)
+
  {%raw%} 
 
 ```bash
