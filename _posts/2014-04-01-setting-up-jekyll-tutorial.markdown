@@ -318,7 +318,12 @@ At this point I realized that I did not have the project under version control. 
 
 remember to delete that password from the log , you fool.
 to answer the previous question, no, magic does not just happen if you push to github.  You need to create a branch called github pages and push to that.
+Things I checked to find this out
 
+- [check settings to see if a github pages page exists](/GettingStartedWithJekyllWebsites/006-click-on-settings.html)
+- [see where page is published](/GettingStartedWithJekyllWebsites/007-see-where-your-page-is-published.html)
+
+So after checking, I created a github pages branch. 
 {%raw%}
 
 ```bash
@@ -331,6 +336,8 @@ to answer the previous question, no, magic does not just happen if you push to g
     To https://github.com/tararoys/simple-documentation-process.git
      * [new branch]      gh-pages -> gh-pages
 ```
+- [debugging github pages branch](/GettingStartedWithJekyllWebsites/008-debugging-gh-pages-branch.html)
+- [Looked for info on how to deploy](/GettingStartedWithJekyllWebsites/009-deploying-with-github-pages.html)
 
  {%endraw%} 
  and delete that password from the log file too, you fool. 
