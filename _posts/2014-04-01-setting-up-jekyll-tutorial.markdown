@@ -593,7 +593,7 @@ The comment is as follows:
  let us try this out. On the jekyll website is a Project Pages URl Structure section. http://jekyllrb.com/docs/github-pages/  It is similar to the comment on the issue that I posted. https://github.com/jekyll/jekyll/issues/2182  Let us see if we can kludge these two things together to get a working produect. 
 
  [Also, the article mentioned in the comment is an incredibly good resource.]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/03-wish-I-had-seen-this-before.html)
- 
+
  {%raw%} 
 
 ```bash
@@ -1006,6 +1006,8 @@ The comment is as follows:
  this info is from the tutorial I copied here: /Users/tlroys/Desktop/GettingStartedWithJekyll/013-help-from-the-issue-tracker/03-wish-I-had-seen-this-before.html  
 
  That tutorial lives here on the internets: http://24ways.org/2013/get-started-with-github-pages/ 
+
+ To make this section format correctly, I had to figure out how to show [liquid code in a blog page.]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/015-rendering-console-logs-with-liquid.html)
 
  Now it is time to make the head 
 
