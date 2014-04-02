@@ -136,6 +136,7 @@ I do what the page says to install jekyll. The install process takes about half 
 
 ```
 I start the server, go to google, and type in http://0.0.0.0:4000. I see [a jekyll blog that looks like this](/GettingStartedWithJekyllWebsites/002my-new-jekyll-site.html)
+I click on the post.  I see a link to a post called [Welcome to Jekyll!](/GettingStartedWithJekyllWebsites/003post-on-jekyll.html). If you click on it, you see an example post.  
 
  {%endraw%} 
 
