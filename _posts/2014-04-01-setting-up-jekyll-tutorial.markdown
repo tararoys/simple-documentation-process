@@ -399,6 +399,10 @@ So after checking, I created a github pages branch.
     ^Cerror: can't be called from trap context. Use --trace to view backtrace
 ```
 
+At this point, I have a blog deployed, but it is buggy. There is no css, and in particular, the main page shows up, but the when you click on the links, you get shown 404 pages. 
+
+- [main  of blog working page working](/GettingStartedWithJekyllWebsites/011-buggy-jekyll-demo/001-main-page-working.html)
+- [404 pages for blog posts ](/GettingStartedWithJekyllWebsites/011-buggy-jekyll-demo/002-welcome-to-jekyll-post-404-error.html)
 
  {%endraw%} 
  I do not know what -w does. 
