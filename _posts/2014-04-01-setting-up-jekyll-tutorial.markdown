@@ -196,37 +196,28 @@ Using Sublime, I copy my 'how to set up easy documentation' post from my failed 
      Auto-regeneration: enabled
      
     ^Cerror: can't be called from trap context. Use --trace to view backtrace
-    bash-3.2$ echo "The jekyll example blog post assumes that you know about hte build command.  I did not know about the build command.  I had to guess using --help.  So here is what the example post should have said.      jekyll build -w
-    > 
-    > This turns the markdown post into a static website. 
-    > 
-    > Type 
-    > 
-    >     jekyll serve. 
-    > 
-    > This starts your local server. You can go to your browser and type 
-    > 
-    >     localhost:4000
-    > 
-    > This will take you to your main page.  It will show you the list of posts, and you can click on this post to see your changes."
-    The jekyll example blog post assumes that you know about hte build command.  I did not know about the build command.  I had to guess using --help.  So here is what the example post should have said.      jekyll build -w
-
-    This turns the markdown post into a static website. 
-
-    Type 
-
-        jekyll serve. 
-
-    This starts your local server. You can go to your browser and type 
-
-        localhost:4000
-
-    This will take you to your main page.  It will show you the list of posts, and you can click on this post to see your changes.
 ```
+{%endraw%}
 
- {%endraw%} 
- I wonder if simply typing jekyll build will update the site? 
- {%raw%} 
+The jekyll example blog post assumes that you know about hte build command.  I did not know about the build command.  I had to guess using --help.  So here is what the example post should have said.      
+
+    jekyll build -w
+     
+This turns the markdown post into a static website. 
+
+Type 
+
+    jekyll serve. 
+
+This starts your local server. You can go to your browser and type 
+
+    localhost:4000
+
+This will take you to your main page.  It will show you the list of posts, and you can click on this post to see your changes.
+
+I wonder if simply typing jekyll build will update the site? 
+
+{%raw%} 
 
 ```bash
 
