@@ -342,6 +342,8 @@ So after checking, I created a github pages branch.
  {%endraw%} 
  and delete that password from the log file too, you fool. 
  My website is now published at http://tararoys.github.io/simple-documentation-process/ 
+
+ [This is a funny loop I got into.  When I asked jekyll how to set up on github, it sent me to the github pages home page.  When I asked github main pages how to get set up on jekyll, it sent me to the jekyll home page. ](/GettingStartedWithJekyllWebsites/010-blogging-with-jekyll.html)
  {%raw%} 
 
 ```bash
@@ -396,6 +398,7 @@ So after checking, I created a github pages branch.
 
     ^Cerror: can't be called from trap context. Use --trace to view backtrace
 ```
+
 
  {%endraw%} 
  I do not know what -w does. 
