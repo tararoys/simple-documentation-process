@@ -48,7 +48,7 @@ This is how I take easy notes: I go to a webpage. When I see a part of the webpa
 
 The website below is my copy of the jekyll main page.  It is numbered 001-follow-main-page-instructions.html because it is the first website I saw when I googled Jekyll. I name follow-main-page-instructions because that is what I did on this page.  
 
-[Tara's higlighted copy of the Jekyll Website](/GettingStartedWithJekyllWebsites/001-follow-main-page-instructions.html/) 
+[Tara's higlighted copy of the Jekyll Website]({{ site.baseurl }}/GettingStartedWithJekyllWebsites/001-follow-main-page-instructions.html/) 
 
 [Actual Jekyll main page](http://jekyllrb.com/)
 
